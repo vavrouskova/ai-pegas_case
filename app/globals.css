@@ -1,0 +1,85 @@
+@import 'tailwindcss';
+
+@theme inline {
+  --color-primary: oklch(var(--primary));
+  --color-secondary: oklch(var(--secondary));
+  --color-tertiary: oklch(var(--tertiary));
+  --color-grey-warm: oklch(var(--grey-warm));
+  --color-grey-cold: oklch(var(--grey-cold));
+  --color-white-smoke: oklch(var(--white-smoke));
+  --color-black-rich: oklch(var(--black-rich));
+}
+
+@theme {
+  --breakpoint-xs: 376px;
+  --breakpoint-2xs: 400px;
+  --breakpoint-2lg: 1200px;
+  --breakpoint-3xl: 1540px;
+
+  --font-family-sans: 'latino-gothic-variable', 'Inter', system-ui, sans-serif;
+
+  --container-content: 55rem;
+}
+
+@layer base {
+  :root {
+    --primary: 0.3529 0.0868 326.35;
+    --secondary: 0.489 0.0618 318.12;
+    --tertiary: 0.8109 0.0484 310.4;
+    --grey-warm: 0.9361 0.0034 325.6;
+    --grey-cold: 0.8988 0.0096 279.68;
+    --white-smoke: 0.9682 0.0017 325.59;
+    --black-rich: 0.1321 0.0048 345.11;
+
+    --font-text: 'slnt' 1, 'wdth' 80, 'wght' 20;
+    --font-heading: 'slnt' 1, 'wdth' 80, 'wght' 40;
+    --font-italic: 'slnt' 110, 'wdth' 80, 'wght' 20;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+      animation-duration: 0s !important;
+      transition-duration: 0s !important;
+    }
+  }
+
+  body {
+    background-color: oklch(var(--white-smoke));
+    color: oklch(var(--black-rich));
+    font-family: var(--font-family-sans);
+    font-variation-settings: var(--font-text);
+    font-size: 18px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 {
+    font-variation-settings: var(--font-heading);
+    letter-spacing: -0.01em;
+  }
+
+  em, i {
+    font-variation-settings: var(--font-italic);
+    font-style: normal;
+  }
+
+  ::selection {
+    background-color: oklch(var(--primary));
+    color: oklch(var(--white-smoke));
+  }
+}
+
+@layer utilities {
+  .container-content {
+    max-width: var(--container-content);
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+}
