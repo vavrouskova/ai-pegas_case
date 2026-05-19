@@ -1,8 +1,27 @@
+import { AnchorNav } from '@/components/AnchorNav';
+import { Credits } from '@/components/Credits';
+import { Hero } from '@/components/Hero';
+import { SectionAssistant } from '@/components/sections/SectionAssistant';
+import { SectionHiggsfield } from '@/components/sections/SectionHiggsfield';
+import { SectionImageCrisis } from '@/components/sections/SectionImageCrisis';
+import { SectionResearch } from '@/components/sections/SectionResearch';
+import { SectionResult } from '@/components/sections/SectionResult';
+import { SectionSales } from '@/components/sections/SectionSales';
+import { SectionVibecoding } from '@/components/sections/SectionVibecoding';
+
 const Page = () => {
   return (
-    <main className="container-content py-32">
-      <p className="text-sm uppercase tracking-wider text-primary">studAIant · case study</p>
-      <h1 className="text-5xl mt-4">Pegas</h1>
+    <main>
+      <Hero />
+      <AnchorNav />
+      <SectionResult />
+      <SectionResearch />
+      <SectionImageCrisis />
+      <SectionHiggsfield />
+      <SectionAssistant />
+      <SectionVibecoding />
+      <SectionSales />
+      <Credits />
     </main>
   );
 };
