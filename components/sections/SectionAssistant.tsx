@@ -10,7 +10,7 @@ export const SectionAssistant = () => {
         <div className="grid md:grid-cols-12 gap-10">
           <div className="md:col-span-4">
             <div className="text-sm uppercase tracking-[0.2em] text-muted mb-4">
-              06 · Asistent
+              07 · Asistent
             </div>
             <h2 className="font-serif text-5xl md:text-6xl leading-[1.05]">
               Custom ChatGPT,
@@ -36,6 +36,22 @@ export const SectionAssistant = () => {
             Ukázky konverzace
           </p>
           <Gallery items={assistant.screenshots} columns={3} aspect="portrait" />
+        </div>
+
+        <div className="mt-24 md:mt-28">
+          <div className="grid md:grid-cols-12 gap-10 mb-8">
+            <div className="md:col-span-4">
+              <h3 className="font-serif text-2xl md:text-3xl">
+                <span className="text-alovy">↦</span> {assistant.futureVision.title}
+              </h3>
+            </div>
+            <div className="md:col-span-7 md:col-start-6">
+              <p className="text-base md:text-lg leading-relaxed text-muted">
+                {assistant.futureVision.description}
+              </p>
+            </div>
+          </div>
+          <Gallery items={assistant.futureVision.gallery} columns={3} aspect="landscape" />
         </div>
       </div>
     </section>

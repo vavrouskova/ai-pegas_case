@@ -1,4 +1,4 @@
-import { caseStudy } from '@/content/caseStudy';
+import { caseStudy, type MediaItem } from '@/content/caseStudy';
 
 const PlayIcon = () => (
   <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
@@ -33,7 +33,7 @@ export const SectionVoice = () => {
         <div className="grid md:grid-cols-12 gap-10">
           <div className="md:col-span-4">
             <div className="text-sm uppercase tracking-[0.2em] text-muted mb-4">
-              05 · Hlas
+              06 · Hlas
             </div>
             <h2 className="font-serif text-5xl md:text-6xl leading-[1.05]">
               Nemluvíme my,
@@ -47,7 +47,7 @@ export const SectionVoice = () => {
         </div>
 
         <div className="mt-16 md:mt-20 grid gap-6 md:grid-cols-2">
-          {voice.items.map((item, index) => (
+          {(voice.items as MediaItem[]).map((item, index) => (
             <article
               key={index}
               className="border border-line p-6 md:p-8 space-y-6 card-hover"

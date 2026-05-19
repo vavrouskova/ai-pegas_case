@@ -4,6 +4,7 @@ import { Hero } from '@/components/Hero';
 import { SectionAssistant } from '@/components/sections/SectionAssistant';
 import { SectionHiggsfield } from '@/components/sections/SectionHiggsfield';
 import { SectionImageCrisis } from '@/components/sections/SectionImageCrisis';
+import { SectionProducts } from '@/components/sections/SectionProducts';
 import { SectionResearch } from '@/components/sections/SectionResearch';
 import { SectionResult } from '@/components/sections/SectionResult';
 import { SectionSales } from '@/components/sections/SectionSales';
@@ -21,6 +22,7 @@ const Page = () => {
         <SectionResearch />
         <SectionImageCrisis />
         <SectionHiggsfield />
+        <SectionProducts />
         <SectionVoice />
         <SectionAssistant />
         <SectionVibecoding />

@@ -27,11 +27,17 @@ export interface MediaItem {
   poster?: string;
 }
 
+export interface PrintMaterial {
+  src: string;
+  alt: string;
+  label: string;
+}
+
 export const caseStudy = {
   hero: {
     label: 'studAIant · case study',
     title: 'Brand PEGAS jsme postavili s AI.',
-    subtitle: 'Texty · Ilustrace · Foto · Hlas · Rešerše · Code',
+    subtitle: 'Texty · Ilustrace · Foto · Produkty · Hlas · Rešerše · Code',
     meta: '2025–2026 · antstudio × Pegas',
     cta: 'Skroluj',
   },
@@ -41,10 +47,11 @@ export const caseStudy = {
     { id: 'reserse', label: '02 Rešerše' },
     { id: 'obraz', label: '03 Krize obrazu' },
     { id: 'higgsfield', label: '04 Higgsfield' },
-    { id: 'hlas', label: '05 Hlas' },
-    { id: 'asistent', label: '06 Asistent' },
-    { id: 'vibecoding', label: '07 Vibecoding' },
-    { id: 'obchod', label: '08 Pro obchod' },
+    { id: 'produkty', label: '05 Produkty' },
+    { id: 'hlas', label: '06 Hlas' },
+    { id: 'asistent', label: '07 Asistent' },
+    { id: 'vibecoding', label: '08 Vibecoding' },
+    { id: 'obchod', label: '09 Pro obchod' },
   ],
 
   // 01 — Výsledek
@@ -78,12 +85,18 @@ export const caseStudy = {
       },
       {
         number: '05',
-        title: 'Hlas',
+        title: 'Produkty',
         description:
-          '30minutová prezentace značky s AI voiceoverem. Pilotní brand podcast. Klient si pustí — my nemluvíme do prázdna.',
+          'Regenerace produktových fotek (rakve před/po), sezónní materiály, tištěné produktové listy. Z katalogu do jednotné vizuální linie za týden.',
       },
       {
         number: '06',
+        title: 'Hlas',
+        description:
+          '30minutová prezentace značky s AI voiceoverem. Interní prezentace pro firmu. Pilotní brand podcast.',
+      },
+      {
+        number: '07',
         title: 'Code',
         description:
           'Vibecoding s Claude Code — kalendář obřadů, parte editor, wizard pro objednání květin za dny místo týdnů.',
@@ -152,7 +165,48 @@ export const caseStudy = {
     ] satisfies BeforeAfterPair[],
   },
 
-  // 05 — Hlas (prezentace + podcast)
+  // 05 — Produkty (regenerace + ad-hoc materiály)
+  products: {
+    intro:
+      'Klient má katalog produktů — různá kvalita fotek, různá doba focení, různé stylizace. My to s AI proženeme do jednotné vizuální linie. Plus generujeme ad-hoc materiály: sezónní propagaci, produktové listy do tisku.',
+    regeneration: {
+      title: 'Regenerace produktů',
+      description:
+        'Zrovna teď regenerujeme všechny rakve. Klient pošle původní fotku, my dodáme čistou produktovou v brandové linii Pegasu. Ukázky před a po:',
+      pairs: [
+        {
+          before: { src: '/products/rakev-01-before.jpg', alt: 'Rakev — původní snímek 1' },
+          after: { src: '/products/rakev-01-after.jpg', alt: 'Rakev — AI regenerace 1' },
+          note: 'Klasická rakev — čištění pozadí, sjednocení nasvícení',
+        },
+        {
+          before: { src: '/products/rakev-02-before.jpg', alt: 'Rakev — původní snímek 2' },
+          after: { src: '/products/rakev-02-after.jpg', alt: 'Rakev — AI regenerace 2' },
+          note: 'Designová rakev — důraz na detail materiálu',
+        },
+        {
+          before: { src: '/products/rakev-03-before.jpg', alt: 'Rakev — původní snímek 3' },
+          after: { src: '/products/rakev-03-after.jpg', alt: 'Rakev — AI regenerace 3' },
+          note: 'Dětská rakev — citlivá vizuální úprava',
+        },
+      ] satisfies BeforeAfterPair[],
+    },
+    adhoc: {
+      title: 'Ad-hoc materiály',
+      description:
+        'Sezónní propagace, produktové listy do tisku, dárkové sety. Bez čekání na fotografa, bez studia, bez týdenního cyklu.',
+      items: [
+        { src: '/products/adhoc-01.png', alt: 'Sezónní materiál 1', label: 'Sezónní · vánoce' },
+        { src: '/products/adhoc-02.png', alt: 'Produktový list', label: 'Produktový list · tisk' },
+        { src: '/products/adhoc-03.png', alt: 'Dárkový set', label: 'Dárkový set' },
+        { src: '/products/adhoc-04.png', alt: 'Pamětní karta', label: 'Pamětní karta' },
+      ] satisfies PrintMaterial[],
+    },
+    takeaway:
+      'Klient přijde s katalogem ve smíšené kvalitě. Za týden má všechno v jedné vizuální linii. Bez focení, bez retušérů.',
+  },
+
+  // 06 — Hlas (prezentace + podcast)
   voice: {
     intro:
       'AI nám vyrobila 30minutovou prezentaci značky Pegas s voiceoverem. Klienti si ji teď přehrávají sami — my nemusíme pořád dokola vysvětlovat základy a máme pod kontrolou obsah. K tomu pilotní ukázka brand podcastu.',
@@ -163,7 +217,14 @@ export const caseStudy = {
         title: 'Prezentace značky Pegas',
         duration: '30 min',
         description:
-          'Kompletní intro do brandu — manifest, vizuální systém, claim. AI voiceover, AI generované pasáže obrazu.',
+          'Kompletní intro do brandu — manifest, vizuální systém, claim. AI voiceover, AI generované pasáže obrazu. Klient si pustí, my nemluvíme do prázdna.',
+      },
+      {
+        kind: 'video',
+        title: 'Interní prezentace pro firmu',
+        duration: '~ 15 min',
+        description:
+          'Direkce do Pegas týmu: kam jdeme, proč to děláme, jak to měříme. AI voiceover držený v tónu značky.',
       },
       {
         kind: 'audio',
@@ -177,7 +238,7 @@ export const caseStudy = {
       'Klient si materiály pustí. Tým antu nemusí každému kreslit značku od nuly znovu. Obsah pod kontrolou, čas zpátky.',
   },
 
-  // 06 — Brand asistent
+  // 07 — Brand asistent
   assistant: {
     intro:
       'Custom ChatGPT asistent, nastavený od první chvíle vývoje brandu Pegas. Krmený brand systémem, manifestem, claim systémem. Postupně se naučil značku — i přes její náročný minimalismus.',
@@ -185,6 +246,7 @@ export const caseStudy = {
       'Píše brand copy a web texty v drženém tónu.',
       'Brainstormuje další postupy a nápady k projektům.',
       'Generuje první ilustrace (vstup do sekce 03).',
+      'Kreslí vize budoucnosti — speculative vizualizace pro klientské pitche.',
       'Není senior. Trefuje se ale dobře — a šetří nám každodenní rutinu.',
     ],
     screenshots: [
@@ -192,6 +254,16 @@ export const caseStudy = {
       { src: '/assistant/02.png', alt: 'Ukázka konverzace 2' },
       { src: '/assistant/03.png', alt: 'Ukázka konverzace 3' },
     ] satisfies ConversationSample[],
+    futureVision: {
+      title: 'Vize budoucnosti',
+      description:
+        'Ukázka, kam asistent dokáže značku posunout: speculative vizualizace prostorů, kampaní, produktových konceptů. Pro klientské pitche a interní směr.',
+      gallery: [
+        { src: '/assistant/vize-01.png', alt: 'Vize budoucnosti 1' },
+        { src: '/assistant/vize-02.png', alt: 'Vize budoucnosti 2' },
+        { src: '/assistant/vize-03.png', alt: 'Vize budoucnosti 3' },
+      ] satisfies GalleryItem[],
+    },
   },
 
   // 06 — Vibecoding
