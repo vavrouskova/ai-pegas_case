@@ -1,4 +1,4 @@
-import { AnchorNav } from '@/components/AnchorNav';
+import { AnchorNav, TopBar } from '@/components/AnchorNav';
 import { Credits } from '@/components/Credits';
 import { Hero } from '@/components/Hero';
 import { SectionAssistant } from '@/components/sections/SectionAssistant';
@@ -11,18 +11,21 @@ import { SectionVibecoding } from '@/components/sections/SectionVibecoding';
 
 const Page = () => {
   return (
-    <main>
-      <Hero />
-      <AnchorNav />
-      <SectionResult />
-      <SectionResearch />
-      <SectionImageCrisis />
-      <SectionHiggsfield />
-      <SectionAssistant />
-      <SectionVibecoding />
-      <SectionSales />
-      <Credits />
-    </main>
+    <>
+      <TopBar />
+      <main>
+        <Hero />
+        <AnchorNav />
+        <SectionResult />
+        <SectionResearch />
+        <SectionImageCrisis />
+        <SectionHiggsfield />
+        <SectionAssistant />
+        <SectionVibecoding />
+        <SectionSales />
+        <Credits />
+      </main>
+    </>
   );
 };
 

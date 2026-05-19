@@ -10,11 +10,11 @@ export const SectionLabel = ({ number, children, className }: SectionLabelProps)
   return (
     <p
       className={cn(
-        'text-xs uppercase tracking-[0.18em] text-primary font-medium',
+        'text-sm uppercase tracking-[0.2em] text-muted',
         className,
       )}
     >
-      {number ? <span className="mr-2">{number} ·</span> : null}
+      {number ? <span>{number} · </span> : null}
       {children}
     </p>
   );

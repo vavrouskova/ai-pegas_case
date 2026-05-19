@@ -1,41 +1,42 @@
 import { caseStudy } from '@/content/caseStudy';
-import { FadeIn } from '@/components/ui/FadeIn';
 import { Gallery } from '@/components/ui/Gallery';
-import { SectionLabel } from '@/components/ui/SectionLabel';
 
 export const SectionAssistant = () => {
   const { assistant } = caseStudy;
 
   return (
-    <section id="asistent" className="bg-grey-warm py-32">
-      <div className="container-content">
-        <FadeIn>
-          <SectionLabel number="05">Brand asistent</SectionLabel>
-          <h2 className="mt-4 text-3xl md:text-4xl">Custom ChatGPT, který zná značku</h2>
-          <p className="mt-6 max-w-2xl text-lg text-black-rich/70">{assistant.intro}</p>
-        </FadeIn>
-
-        <FadeIn delay={150}>
-          <ul className="mt-12 grid gap-4 sm:grid-cols-2 max-w-3xl">
-            {assistant.capabilities.map((capability, index) => (
-              <li
-                key={index}
-                className="bg-white-smoke p-6 rounded-sm border border-black-rich/5"
-              >
-                <p className="text-base text-black-rich/85 leading-relaxed">{capability}</p>
-              </li>
-            ))}
-          </ul>
-        </FadeIn>
-
-        <FadeIn delay={300}>
-          <div className="mt-20">
-            <p className="text-sm uppercase tracking-wider text-black-rich/50 mb-6">
-              Ukázky konverzace
-            </p>
-            <Gallery items={assistant.screenshots} columns={3} aspect="portrait" />
+    <section id="asistent" className="relative px-6 md:px-12 py-24 md:py-32 border-t border-line">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-12 gap-10">
+          <div className="md:col-span-4">
+            <div className="text-sm uppercase tracking-[0.2em] text-muted mb-4">
+              05 · Asistent
+            </div>
+            <h2 className="font-serif text-5xl md:text-6xl leading-[1.05]">
+              Custom ChatGPT,
+              <br />
+              který <em className="text-alovy not-italic">zná značku</em>.
+            </h2>
           </div>
-        </FadeIn>
+          <div className="md:col-span-7 md:col-start-6 space-y-6">
+            <p className="text-lg md:text-xl leading-relaxed">{assistant.intro}</p>
+            <ul className="space-y-3">
+              {assistant.capabilities.map((capability, index) => (
+                <li key={index} className="flex items-start gap-3 text-muted">
+                  <span className="text-alovy font-serif text-2xl leading-none shrink-0">·</span>
+                  <p className="leading-relaxed">{capability}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div className="mt-20 md:mt-24">
+          <p className="text-sm uppercase tracking-[0.2em] text-muted mb-6">
+            Ukázky konverzace
+          </p>
+          <Gallery items={assistant.screenshots} columns={3} aspect="portrait" />
+        </div>
       </div>
     </section>
   );

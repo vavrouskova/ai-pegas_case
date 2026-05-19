@@ -1,35 +1,36 @@
 import { caseStudy } from '@/content/caseStudy';
-import { SectionLabel } from '@/components/ui/SectionLabel';
 
 export const Credits = () => {
   const { credits } = caseStudy;
 
   return (
-    <footer id="credits" className="container-content py-24 border-t border-black-rich/10">
-      <SectionLabel>Credits</SectionLabel>
+    <footer id="credits" className="relative px-6 md:px-12 py-20 md:py-24 border-t border-line">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-sm uppercase tracking-[0.2em] text-muted mb-8">Credits</div>
 
-      <div className="mt-8 grid gap-8 md:grid-cols-2 max-w-3xl">
-        <div className="space-y-2">
-          <p className="text-sm text-black-rich/85">{credits.team}</p>
-          <p className="text-sm text-black-rich/85">{credits.client}</p>
+        <div className="grid md:grid-cols-12 gap-10">
+          <div className="md:col-span-4 space-y-3">
+            <p className="text-base">{credits.team}</p>
+            <p className="text-base text-muted">{credits.client}</p>
+          </div>
+
+          <div className="md:col-span-7 md:col-start-6">
+            <p className="text-sm uppercase tracking-[0.2em] text-muted mb-3">Stack</p>
+            <ul className="flex flex-wrap gap-2">
+              {credits.stack.map((tech) => (
+                <li
+                  key={tech}
+                  className="text-xs px-3 py-1 border border-line text-muted"
+                >
+                  {tech}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
-        <div>
-          <p className="text-xs uppercase tracking-wider text-black-rich/50 mb-2">Stack</p>
-          <ul className="flex flex-wrap gap-2">
-            {credits.stack.map((tech) => (
-              <li
-                key={tech}
-                className="text-xs px-2 py-1 bg-grey-warm text-black-rich/70 rounded-sm"
-              >
-                {tech}
-              </li>
-            ))}
-          </ul>
-        </div>
+        <p className="mt-16 text-xs text-muted tracking-wide">{credits.copyright}</p>
       </div>
-
-      <p className="mt-12 text-xs text-black-rich/50">{credits.copyright}</p>
     </footer>
   );
 };

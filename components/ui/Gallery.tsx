@@ -34,12 +34,12 @@ export const Gallery = ({
   className,
 }: GalleryProps) => {
   return (
-    <div className={cn('grid gap-4', columnsClass[columns], className)}>
+    <div className={cn('grid gap-4 md:gap-5', columnsClass[columns], className)}>
       {items.map((item, index) => (
         <figure key={`${item.src}-${index}`} className="space-y-2">
           <div
             className={cn(
-              'relative overflow-hidden rounded-sm bg-grey-warm',
+              'relative overflow-hidden border border-line bg-cream',
               aspectClass[aspect],
             )}
           >
@@ -52,7 +52,7 @@ export const Gallery = ({
             />
           </div>
           {item.caption ? (
-            <figcaption className="text-sm text-black-rich/70">{item.caption}</figcaption>
+            <figcaption className="text-sm text-muted">{item.caption}</figcaption>
           ) : null}
         </figure>
       ))}

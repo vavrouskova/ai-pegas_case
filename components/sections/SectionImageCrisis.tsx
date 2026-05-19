@@ -1,48 +1,53 @@
 import { caseStudy } from '@/content/caseStudy';
-import { FadeIn } from '@/components/ui/FadeIn';
 import { Gallery } from '@/components/ui/Gallery';
-import { SectionLabel } from '@/components/ui/SectionLabel';
 
 export const SectionImageCrisis = () => {
   const { imageCrisis } = caseStudy;
 
   return (
-    <section id="obraz" className="bg-grey-warm py-32">
-      <div className="container-content">
-        <FadeIn>
-          <SectionLabel number="03">Krize obrazu</SectionLabel>
-          <h2 className="mt-4 text-3xl md:text-4xl">Stockové banky tu vizualitu nemají</h2>
-        </FadeIn>
-
-        <div className="mt-12 grid gap-12 md:grid-cols-3 max-w-5xl">
-          <FadeIn delay={100}>
-            <h3 className="text-sm uppercase tracking-wider text-primary mb-3">Problém</h3>
-            <p className="text-base text-black-rich/85 leading-relaxed">{imageCrisis.problem}</p>
-          </FadeIn>
-
-          <FadeIn delay={200}>
-            <h3 className="text-sm uppercase tracking-wider text-black-rich/60 mb-3">
-              Tradiční řešení
-            </h3>
-            <p className="text-base text-black-rich/85 leading-relaxed">
-              {imageCrisis.traditionalSolution}
-            </p>
-          </FadeIn>
-
-          <FadeIn delay={300}>
-            <h3 className="text-sm uppercase tracking-wider text-primary mb-3">AI řešení</h3>
-            <p className="text-base text-black-rich/85 leading-relaxed">{imageCrisis.aiSolution}</p>
-          </FadeIn>
+    <section id="obraz" className="relative px-6 md:px-12 py-24 md:py-32 border-t border-line">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-12 gap-10">
+          <div className="md:col-span-4">
+            <div className="text-sm uppercase tracking-[0.2em] text-muted mb-4">
+              03 · Krize obrazu
+            </div>
+            <h2 className="font-serif text-5xl md:text-6xl leading-[1.05]">
+              Stockové banky
+              <br />
+              <em className="text-alovy not-italic">tu vizualitu</em>
+              <br />
+              nemají.
+            </h2>
+          </div>
+          <div className="md:col-span-7 md:col-start-6 space-y-8">
+            <div>
+              <h3 className="text-sm uppercase tracking-[0.2em] text-muted mb-3">Problém</h3>
+              <p className="text-base md:text-lg leading-relaxed">{imageCrisis.problem}</p>
+            </div>
+            <div>
+              <h3 className="text-sm uppercase tracking-[0.2em] text-muted mb-3">
+                Tradiční řešení
+              </h3>
+              <p className="text-base md:text-lg leading-relaxed text-muted">
+                {imageCrisis.traditionalSolution}
+              </p>
+            </div>
+            <div>
+              <h3 className="text-sm uppercase tracking-[0.2em] text-alovy-dark mb-3">
+                AI řešení
+              </h3>
+              <p className="text-base md:text-lg leading-relaxed">{imageCrisis.aiSolution}</p>
+            </div>
+          </div>
         </div>
 
-        <FadeIn delay={400}>
-          <div className="mt-20">
-            <p className="text-sm uppercase tracking-wider text-black-rich/50 mb-6">
-              Galerie · AI ilustrace pro Pegas
-            </p>
-            <Gallery items={imageCrisis.gallery} columns={3} aspect="square" />
-          </div>
-        </FadeIn>
+        <div className="mt-20 md:mt-24">
+          <p className="text-sm uppercase tracking-[0.2em] text-muted mb-6">
+            Galerie · AI ilustrace pro Pegas
+          </p>
+          <Gallery items={imageCrisis.gallery} columns={4} aspect="square" />
+        </div>
       </div>
     </section>
   );

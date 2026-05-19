@@ -1,31 +1,36 @@
 import { caseStudy } from '@/content/caseStudy';
-import { SectionLabel } from '@/components/ui/SectionLabel';
 
 export const Hero = () => {
   const { hero } = caseStudy;
 
   return (
-    <section className="container-content min-h-[80vh] flex flex-col justify-center py-24">
-      <SectionLabel>{hero.label}</SectionLabel>
-
-      <h1 className="mt-8 text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05]">
-        {hero.title}
-      </h1>
-
-      <p className="mt-8 text-lg sm:text-xl text-black-rich/70 max-w-xl">
-        {hero.subtitle}
-      </p>
-
-      <p className="mt-16 text-sm uppercase tracking-wider text-black-rich/50">
-        {hero.meta}
-      </p>
-
-      <a
-        href="#vysledek"
-        className="mt-12 text-sm uppercase tracking-wider text-primary hover:opacity-70 transition-opacity inline-flex items-center gap-2 w-fit"
-      >
-        ↓ {hero.cta}
-      </a>
+    <section id="hero" className="relative px-6 md:px-12 pt-20 md:pt-32 pb-24 md:pb-40">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-sm uppercase tracking-[0.2em] text-muted mb-6">
+          {hero.subtitle}
+        </div>
+        <h1 className="font-serif text-[12vw] md:text-[8vw] lg:text-[7rem] leading-[0.95] tracking-tight">
+          Brand <em className="text-alovy not-italic">PEGAS</em>
+          <br />
+          jsme postavili
+          <br />
+          <span className="text-alovy">s AI.</span>
+        </h1>
+        <p className="mt-10 md:mt-14 text-xl md:text-2xl max-w-2xl leading-snug text-muted">
+          Texty, ilustrace, fotky, kód. AI v antu reálně pracuje na klientských projektech —
+          a&nbsp;tohle všechno <em>umíme prodat dál</em>.
+        </p>
+        <div className="mt-12 text-sm uppercase tracking-[0.2em] text-muted">{hero.meta}</div>
+        <a
+          href="#vysledek"
+          className="mt-16 flex items-center gap-3 text-sm text-muted scroll-hint w-fit"
+        >
+          <span>Skroluj</span>
+          <svg width="20" height="12" viewBox="0 0 20 12" fill="none">
+            <path d="M1 1l9 9 9-9" stroke="currentColor" strokeWidth="1.5" />
+          </svg>
+        </a>
+      </div>
     </section>
   );
 };
