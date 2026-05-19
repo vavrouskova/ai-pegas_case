@@ -38,7 +38,7 @@ export const caseStudy = {
     label: 'studAIant · case study',
     title: 'Brand PEGAS jsme postavili s AI.',
     subtitle: 'Texty · Ilustrace · Foto · Produkty · Hlas · Rešerše · Code',
-    meta: '2025–2026 · antstudio × Pegas',
+    meta: '2025–2026 · antstudio × PEGAS',
     cta: 'Skroluj',
   },
 
@@ -172,7 +172,7 @@ export const caseStudy = {
     regeneration: {
       title: 'Regenerace produktů',
       description:
-        'Zrovna teď regenerujeme všechny rakve. Klient pošle původní fotku, my dodáme čistou produktovou v brandové linii Pegasu. Ukázky před a po:',
+        'Zrovna teď regenerujeme všechny rakve. Klient pošle původní fotku, my dodáme čistou produktovou v brandové linii PEGAS. Ukázky před a po:',
       pairs: [
         {
           before: { src: '/products/rakev-01-before.jpg', alt: 'Rakev — původní snímek 1' },
@@ -209,12 +209,12 @@ export const caseStudy = {
   // 06 — Hlas (prezentace + podcast)
   voice: {
     intro:
-      'Vyrobili jsme 30minutovou prezentaci značky Pegas s AI voiceoverem. Klienti si ji teď přehrávají sami — nemusíme pořád dokola vysvětlovat základy a máme obsah pod kontrolou. K tomu pilotní ukázka brand podcastu.',
+      'Vyrobili jsme 30minutovou prezentaci značky PEGAS s AI voiceoverem. Klienti si ji teď přehrávají sami — nemusíme pořád dokola vysvětlovat základy a máme obsah pod kontrolou. K tomu pilotní ukázka brand podcastu.',
     // src/poster nechány nevyplněné — vendy doplní reálné soubory do public/media/
     items: [
       {
         kind: 'video',
-        title: 'Prezentace značky Pegas',
+        title: 'Prezentace značky PEGAS',
         duration: '30 min',
         description:
           'Kompletní intro do brandu — manifest, vizuální systém, claim. AI voiceover a generované pasáže obrazu, my dramaturgie a střih. Klient si pustí a my nemluvíme do prázdna.',
@@ -224,14 +224,14 @@ export const caseStudy = {
         title: 'Interní prezentace pro firmu',
         duration: '~ 15 min',
         description:
-          'Direkce do Pegas týmu: kam jdeme, proč to děláme, jak to měříme. AI voiceover držený v tónu značky.',
+          'Direkce do PEGAS týmu: kam jdeme, proč to děláme, jak to měříme. AI voiceover držený v tónu značky.',
       },
       {
         kind: 'audio',
         title: 'Pilotní brand podcast',
         duration: '~ 5 min',
         description:
-          'Ukázka, jak by mohl vypadat dlouhodobý audio kanál Pegas. Hlas, hudbu a tonalitu jsme vygenerovali AI nástroji, scénář držíme my.',
+          'Ukázka, jak by mohl vypadat dlouhodobý audio kanál PEGAS. Hlas, hudbu a tonalitu jsme vygenerovali AI nástroji, scénář držíme my.',
       },
     ] satisfies MediaItem[],
     takeaway:
@@ -241,7 +241,7 @@ export const caseStudy = {
   // 07 — Brand asistent
   assistant: {
     intro:
-      'Postavili jsme custom ChatGPT asistenta hned na začátku vývoje brandu Pegas. Krmíme ho brand systémem, manifestem, claim systémem. Postupně jsme ho doladili na značku — i přes její náročný minimalismus.',
+      'Postavili jsme custom ChatGPT asistenta hned na začátku vývoje brandu PEGAS. Krmíme ho brand systémem, manifestem, claim systémem. Postupně jsme ho doladili na značku — i přes její náročný minimalismus.',
     capabilities: [
       'Píšeme s ním brand copy a web texty v drženém tónu.',
       'Brainstormujeme s ním postupy a nápady k projektům.',
@@ -288,7 +288,7 @@ export const caseStudy = {
       },
     ],
     screenshots: [
-      { src: '/screenshots/kalendar.png', alt: 'Kalendář obřadů na Pegas webu' },
+      { src: '/screenshots/kalendar.png', alt: 'Kalendář obřadů na PEGAS webu' },
       { src: '/screenshots/parte.png', alt: 'Parte editor wizard' },
       { src: '/screenshots/wizard.png', alt: 'Wizard pro objednání květiny' },
     ] satisfies GalleryItem[],
@@ -326,9 +326,9 @@ export const caseStudy = {
 
   credits: {
     team: 'Tým antstudia',
-    client: 'Klient: Pegas',
+    client: 'Klient: PEGAS',
     stack: ['ChatGPT custom', 'Higgsfield', 'Claude Code', 'Next.js 16', 'Vercel', 'WordPress'],
-    copyright: '© 2026 · studAIant case study · antstudio × Pegas',
+    copyright: '© 2026 · studAIant case study · antstudio × PEGAS',
   },
 };
 

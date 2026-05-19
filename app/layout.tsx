@@ -2,12 +2,12 @@ import './globals.css';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'studAIant · Case study Pegas',
+  title: 'studAIant · Case study PEGAS',
   description:
-    'Jak antstudio postavilo brand a web Pegas s pomocí AI. Case study o textech, ilustracích, Higgsfield foto workflow a vibecoding features.',
+    'Jak antstudio postavilo brand a web PEGAS s pomocí AI. Case study o textech, ilustracích, Higgsfield foto workflow a vibecoding features.',
   openGraph: {
-    title: 'studAIant · Case study Pegas',
-    description: 'Jak antstudio postavilo brand a web Pegas s pomocí AI.',
+    title: 'studAIant · Case study PEGAS',
+    description: 'Jak antstudio postavilo brand a web PEGAS s pomocí AI.',
     type: 'article',
     locale: 'cs_CZ',
   },

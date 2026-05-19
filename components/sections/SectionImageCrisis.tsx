@@ -44,7 +44,7 @@ export const SectionImageCrisis = () => {
 
         <div className="mt-20 md:mt-24">
           <p className="text-sm uppercase tracking-[0.2em] text-muted mb-6">
-            Galerie · AI ilustrace pro Pegas
+            Galerie · AI ilustrace pro PEGAS
           </p>
           <Gallery items={imageCrisis.gallery} columns={4} aspect="square" />
         </div>
