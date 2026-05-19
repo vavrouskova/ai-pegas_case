@@ -18,11 +18,20 @@ export interface ConversationSample {
   caption?: string;
 }
 
+export interface MediaItem {
+  kind: 'video' | 'audio';
+  title: string;
+  duration: string;
+  description: string;
+  src?: string;
+  poster?: string;
+}
+
 export const caseStudy = {
   hero: {
     label: 'studAIant · case study',
     title: 'Brand PEGAS jsme postavili s AI.',
-    subtitle: 'Texty · Ilustrace · Foto · Rešerše · Code',
+    subtitle: 'Texty · Ilustrace · Foto · Hlas · Rešerše · Code',
     meta: '2025–2026 · antstudio × Pegas',
     cta: 'Skroluj',
   },
@@ -32,9 +41,10 @@ export const caseStudy = {
     { id: 'reserse', label: '02 Rešerše' },
     { id: 'obraz', label: '03 Krize obrazu' },
     { id: 'higgsfield', label: '04 Higgsfield' },
-    { id: 'asistent', label: '05 Asistent' },
-    { id: 'vibecoding', label: '06 Vibecoding' },
-    { id: 'obchod', label: '07 Pro obchod' },
+    { id: 'hlas', label: '05 Hlas' },
+    { id: 'asistent', label: '06 Asistent' },
+    { id: 'vibecoding', label: '07 Vibecoding' },
+    { id: 'obchod', label: '08 Pro obchod' },
   ],
 
   // 01 — Výsledek
@@ -68,6 +78,12 @@ export const caseStudy = {
       },
       {
         number: '05',
+        title: 'Hlas',
+        description:
+          '30minutová prezentace značky s AI voiceoverem. Pilotní brand podcast. Klient si pustí — my nemluvíme do prázdna.',
+      },
+      {
+        number: '06',
         title: 'Code',
         description:
           'Vibecoding s Claude Code — kalendář obřadů, parte editor, wizard pro objednání květin za dny místo týdnů.',
@@ -136,7 +152,32 @@ export const caseStudy = {
     ] satisfies BeforeAfterPair[],
   },
 
-  // 05 — Brand asistent
+  // 05 — Hlas (prezentace + podcast)
+  voice: {
+    intro:
+      'AI nám vyrobila 30minutovou prezentaci značky Pegas s voiceoverem. Klienti si ji teď přehrávají sami — my nemusíme pořád dokola vysvětlovat základy a máme pod kontrolou obsah. K tomu pilotní ukázka brand podcastu.',
+    // src/poster nechány nevyplněné — vendy doplní reálné soubory do public/media/
+    items: [
+      {
+        kind: 'video',
+        title: 'Prezentace značky Pegas',
+        duration: '30 min',
+        description:
+          'Kompletní intro do brandu — manifest, vizuální systém, claim. AI voiceover, AI generované pasáže obrazu.',
+      },
+      {
+        kind: 'audio',
+        title: 'Pilotní brand podcast',
+        duration: '~ 5 min',
+        description:
+          'Ukázka, jak by mohl vypadat dlouhodobý audio kanál Pegas. Hlas, hudba, tonalita — všechno AI.',
+      },
+    ] satisfies MediaItem[],
+    takeaway:
+      'Klient si materiály pustí. Tým antu nemusí každému kreslit značku od nuly znovu. Obsah pod kontrolou, čas zpátky.',
+  },
+
+  // 06 — Brand asistent
   assistant: {
     intro:
       'Custom ChatGPT asistent, nastavený od první chvíle vývoje brandu Pegas. Krmený brand systémem, manifestem, claim systémem. Postupně se naučil značku — i přes její náročný minimalismus.',

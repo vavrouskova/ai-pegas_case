@@ -8,6 +8,7 @@ import { SectionResearch } from '@/components/sections/SectionResearch';
 import { SectionResult } from '@/components/sections/SectionResult';
 import { SectionSales } from '@/components/sections/SectionSales';
 import { SectionVibecoding } from '@/components/sections/SectionVibecoding';
+import { SectionVoice } from '@/components/sections/SectionVoice';
 
 const Page = () => {
   return (
@@ -20,6 +21,7 @@ const Page = () => {
         <SectionResearch />
         <SectionImageCrisis />
         <SectionHiggsfield />
+        <SectionVoice />
         <SectionAssistant />
         <SectionVibecoding />
         <SectionSales />
