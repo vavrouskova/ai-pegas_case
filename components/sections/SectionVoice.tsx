@@ -36,9 +36,9 @@ export const SectionVoice = () => {
               06 · Hlas
             </div>
             <h2 className="font-serif text-5xl md:text-6xl leading-[1.05]">
-              Nemluvíme my,
+              Nemluvíme dokola,
               <br />
-              <em className="text-alovy not-italic">mluví AI</em>.
+              <em className="text-alovy not-italic">mluví materiály</em>.
             </h2>
           </div>
           <div className="md:col-span-7 md:col-start-6">

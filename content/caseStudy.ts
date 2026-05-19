@@ -57,49 +57,49 @@ export const caseStudy = {
   // 01 — Výsledek
   result: {
     intro:
-      'Pět oblastí, ve kterých AI v antu reálně pracuje na klientských projektech. Tohle umíme dělat — a umíme to prodat dál.',
+      'Sedm oblastí, ve kterých v antu používáme AI jako nástroj na klientských projektech. Tohle umíme dělat — a umíme to prodat dál.',
     areas: [
       {
         number: '01',
         title: 'Texty',
         description:
-          'AI asistent na míru značce píše copy, brand statementy, web texty. Pomáhá brainstormovat a držet konzistentní tón.',
+          'Píšeme copy, brand statementy a web texty s AI asistentem trénovaným na klientovu značku. Brainstormujeme s ním a držíme konzistentní tón.',
       },
       {
         number: '02',
         title: 'Ilustrace',
         description:
-          'AI generuje ilustrace, které obejdou stockovou tíseň pohřebního oboru a vyvolávají klid místo hrůzy.',
+          'Generujeme ilustrace, které obcházejí stockovou tíseň pohřebního oboru. Vyvoláváme klid místo hrůzy.',
       },
       {
         number: '03',
         title: 'Foto (Higgsfield)',
         description:
-          'Mobilní snímek → AI cleanup → produktová fotka připravená na e-shop. Hodiny místo dnů.',
+          'Z mobilního snímku přes cleanup v Higgsfieldu uděláme produktovou fotku připravenou na e-shop. Hodiny místo dnů.',
       },
       {
         number: '04',
         title: 'Rešerše',
         description:
-          'Zahraniční benchmarks, konkurenční analýzy, pochopení citlivých témat.',
+          'Děláme zahraniční benchmarks, konkurenční analýzy, prohlubujeme pochopení citlivých témat.',
       },
       {
         number: '05',
         title: 'Produkty',
         description:
-          'Regenerace produktových fotek (rakve před/po), sezónní materiály, tištěné produktové listy. Z katalogu do jednotné vizuální linie za týden.',
+          'Regenerujeme produktové fotky (rakve před/po), vyrábíme sezónní materiály a tištěné produktové listy. Z katalogu do jednotné vizuální linie za týden.',
       },
       {
         number: '06',
         title: 'Hlas',
         description:
-          '30minutová prezentace značky s AI voiceoverem. Interní prezentace pro firmu. Pilotní brand podcast.',
+          'Postavili jsme 30minutovou prezentaci značky s AI voiceoverem, interní prezentaci pro firmu a pilotní brand podcast.',
       },
       {
         number: '07',
         title: 'Code',
         description:
-          'Vibecoding s Claude Code — kalendář obřadů, parte editor, wizard pro objednání květin za dny místo týdnů.',
+          'S Claude Code stavíme features — kalendář obřadů, parte editor, wizard pro objednání květin za dny místo týdnů.',
       },
     ] satisfies ServiceArea[],
   },
@@ -107,7 +107,7 @@ export const caseStudy = {
   // 02 — Rešerše
   research: {
     intro:
-      'Než jsme cokoliv navrhli, museli jsme téma pohřebnictví pochopit. AI nám zkrátila zorientování v cizí krajině na zlomek času.',
+      'Než jsme cokoliv navrhli, museli jsme téma pohřebnictví pochopit. S AI jsme zorientování v cizí krajině zkrátili na zlomek času.',
     points: [
       'Konkurenční analýza českého trhu — co kdo nabízí, co chybí, kde je prostor.',
       'Zahraniční benchmarks — Skandinávie (designově otevřenější), UK (citlivost komunikace), US (digitální nabídka).',
@@ -122,7 +122,7 @@ export const caseStudy = {
     traditionalSolution:
       'Klasická cesta: vlastní focení. Drahé, časově náročné, a stejně narazíte na to, že fotka konkrétního smutku nemusí být to, co web chce sdělit.',
     aiSolution:
-      'AI ilustrace obcházejí konkrétnost. Vyvolávají klid. Mohou pracovat se symbolikou bez doslovnosti — strom místo hřbitova, vlna místo věnce.',
+      'S našimi AI ilustracemi obcházíme konkrétnost. Vyvoláváme klid. Pracujeme se symbolikou bez doslovnosti — strom místo hřbitova, vlna místo věnce.',
     gallery: [
       { src: '/illustrations/01.png', alt: 'AI ilustrace 1' },
       { src: '/illustrations/02.png', alt: 'AI ilustrace 2' },
@@ -143,8 +143,8 @@ export const caseStudy = {
       'Florista uváže nový produkt v Vazárně.',
       'Vyfotí ho mobilem. Žádné světla, žádný studio setup.',
       'Pošle nám fotku.',
-      'Higgsfield AI cleanup + brand-aligned úprava.',
-      'Nahozeno na e-shop. Hodiny místo dnů.',
+      'Uděláme cleanup v Higgsfieldu a brand-aligned úpravu.',
+      'Nahodíme na e-shop. Hodiny místo dnů.',
     ],
     pairs: [
       {
@@ -168,7 +168,7 @@ export const caseStudy = {
   // 05 — Produkty (regenerace + ad-hoc materiály)
   products: {
     intro:
-      'Klient má katalog produktů — různá kvalita fotek, různá doba focení, různé stylizace. My to s AI proženeme do jednotné vizuální linie. Plus generujeme ad-hoc materiály: sezónní propagaci, produktové listy do tisku.',
+      'Klient má katalog produktů — různá kvalita fotek, různá doba focení, různé stylizace. S AI to proženeme do jednotné vizuální linie. Plus vyrábíme ad-hoc materiály: sezónní propagaci, produktové listy do tisku.',
     regeneration: {
       title: 'Regenerace produktů',
       description:
@@ -209,7 +209,7 @@ export const caseStudy = {
   // 06 — Hlas (prezentace + podcast)
   voice: {
     intro:
-      'AI nám vyrobila 30minutovou prezentaci značky Pegas s voiceoverem. Klienti si ji teď přehrávají sami — my nemusíme pořád dokola vysvětlovat základy a máme pod kontrolou obsah. K tomu pilotní ukázka brand podcastu.',
+      'Vyrobili jsme 30minutovou prezentaci značky Pegas s AI voiceoverem. Klienti si ji teď přehrávají sami — nemusíme pořád dokola vysvětlovat základy a máme obsah pod kontrolou. K tomu pilotní ukázka brand podcastu.',
     // src/poster nechány nevyplněné — vendy doplní reálné soubory do public/media/
     items: [
       {
@@ -217,7 +217,7 @@ export const caseStudy = {
         title: 'Prezentace značky Pegas',
         duration: '30 min',
         description:
-          'Kompletní intro do brandu — manifest, vizuální systém, claim. AI voiceover, AI generované pasáže obrazu. Klient si pustí, my nemluvíme do prázdna.',
+          'Kompletní intro do brandu — manifest, vizuální systém, claim. AI voiceover a generované pasáže obrazu, my dramaturgie a střih. Klient si pustí a my nemluvíme do prázdna.',
       },
       {
         kind: 'video',
@@ -231,7 +231,7 @@ export const caseStudy = {
         title: 'Pilotní brand podcast',
         duration: '~ 5 min',
         description:
-          'Ukázka, jak by mohl vypadat dlouhodobý audio kanál Pegas. Hlas, hudba, tonalita — všechno AI.',
+          'Ukázka, jak by mohl vypadat dlouhodobý audio kanál Pegas. Hlas, hudbu a tonalitu jsme vygenerovali AI nástroji, scénář držíme my.',
       },
     ] satisfies MediaItem[],
     takeaway:
@@ -241,13 +241,13 @@ export const caseStudy = {
   // 07 — Brand asistent
   assistant: {
     intro:
-      'Custom ChatGPT asistent, nastavený od první chvíle vývoje brandu Pegas. Krmený brand systémem, manifestem, claim systémem. Postupně se naučil značku — i přes její náročný minimalismus.',
+      'Postavili jsme custom ChatGPT asistenta hned na začátku vývoje brandu Pegas. Krmíme ho brand systémem, manifestem, claim systémem. Postupně jsme ho doladili na značku — i přes její náročný minimalismus.',
     capabilities: [
-      'Píše brand copy a web texty v drženém tónu.',
-      'Brainstormuje další postupy a nápady k projektům.',
-      'Generuje první ilustrace (vstup do sekce 03).',
-      'Kreslí vize budoucnosti — speculative vizualizace pro klientské pitche.',
-      'Není senior. Trefuje se ale dobře — a šetří nám každodenní rutinu.',
+      'Píšeme s ním brand copy a web texty v drženém tónu.',
+      'Brainstormujeme s ním postupy a nápady k projektům.',
+      'Generujeme s ním první ilustrace (vstup do sekce 03).',
+      'Kreslíme s ním vize budoucnosti — speculative vizualizace pro klientské pitche.',
+      'Není to senior nástroj. Trefuje se ale dobře — a šetří nám každodenní rutinu.',
     ],
     screenshots: [
       { src: '/assistant/01.png', alt: 'Ukázka konverzace 1' },
@@ -257,7 +257,7 @@ export const caseStudy = {
     futureVision: {
       title: 'Vize budoucnosti',
       description:
-        'Ukázka, kam asistent dokáže značku posunout: speculative vizualizace prostorů, kampaní, produktových konceptů. Pro klientské pitche a interní směr.',
+        'Ukázka, kam s asistentem značku dokážeme posunout: speculative vizualizace prostorů, kampaní, produktových konceptů. Pro klientské pitche a interní směr.',
       gallery: [
         { src: '/assistant/vize-01.png', alt: 'Vize budoucnosti 1' },
         { src: '/assistant/vize-02.png', alt: 'Vize budoucnosti 2' },
@@ -266,10 +266,10 @@ export const caseStudy = {
     },
   },
 
-  // 06 — Vibecoding
+  // 08 — Vibecoding
   vibecoding: {
     intro:
-      'Druhá kapitola: AI nepíše jen texty, AI píše i kód. S Claude Code workflow jsme postavili features, které by tradičně trvaly týdny.',
+      'Druhá kapitola: s AI nepíšeme jen texty, píšeme i kód. S Claude Code workflow jsme postavili features, které by tradičně trvaly týdny.',
     features: [
       {
         title: 'Kalendář obřadů',
@@ -302,7 +302,7 @@ export const caseStudy = {
       {
         title: 'AI brand asistent na míru',
         description:
-          'Nastavený, krmený značkou, k denní práci. Pro klienty, kteří chtějí konzistenci napříč týmem.',
+          'Nastavíme ho, krmíme klientovou značkou, dáme tým k denní práci. Pro klienty, kteří chtějí konzistenci napříč týmem.',
       },
       {
         title: 'AI ilustrace pro citlivá témata',
@@ -321,7 +321,7 @@ export const caseStudy = {
       },
     ],
     takeaway:
-      'Bez AI by středoevropská vizualita pohřebnictví neexistovala. S AI je antstudio připravené posunout tu hranici i u dalších klientů.',
+      'Bez AI bychom středoevropskou vizualitu pohřebnictví nedokázali postavit. S AI je antstudio připravené posunout tu hranici i u dalších klientů.',
   },
 
   credits: {

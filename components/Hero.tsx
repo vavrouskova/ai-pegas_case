@@ -17,8 +17,8 @@ export const Hero = () => {
           <span className="text-alovy">s AI.</span>
         </h1>
         <p className="mt-10 md:mt-14 text-xl md:text-2xl max-w-2xl leading-snug text-muted">
-          Texty, ilustrace, fotky, kód. AI v antu reálně pracuje na klientských projektech —
-          a&nbsp;tohle všechno <em>umíme prodat dál</em>.
+          Texty, ilustrace, fotky, hlas, kód. V antu používáme AI jako nástroj na klientských
+          projektech — a&nbsp;tohle všechno <em>umíme prodat dál</em>.
         </p>
         <div className="mt-12 text-sm uppercase tracking-[0.2em] text-muted">{hero.meta}</div>
         <a

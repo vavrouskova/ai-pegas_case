@@ -15,7 +15,7 @@ export const SectionAssistant = () => {
             <h2 className="font-serif text-5xl md:text-6xl leading-[1.05]">
               Custom ChatGPT,
               <br />
-              který <em className="text-alovy not-italic">zná značku</em>.
+              kterého <em className="text-alovy not-italic">jsme naučili</em> značku.
             </h2>
           </div>
           <div className="md:col-span-7 md:col-start-6 space-y-6">
