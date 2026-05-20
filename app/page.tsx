@@ -8,6 +8,7 @@ import { SectionResearch } from '@/components/sections/SectionResearch';
 import { SectionResult } from '@/components/sections/SectionResult';
 import { SectionSales } from '@/components/sections/SectionSales';
 import { SectionVibecoding } from '@/components/sections/SectionVibecoding';
+import { SectionVisualLanguage } from '@/components/sections/SectionVisualLanguage';
 import { SectionVoice } from '@/components/sections/SectionVoice';
 
 const Page = () => {
@@ -19,6 +20,7 @@ const Page = () => {
         <AnchorNav />
         <SectionResult />
         <SectionResearch />
+        <SectionVisualLanguage />
         <SectionImageCrisis />
         <SectionHiggsfield />
         <SectionVoice />

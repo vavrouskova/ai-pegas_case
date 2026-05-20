@@ -52,12 +52,13 @@ export const caseStudy = {
   anchors: [
     { id: 'vysledek', label: '01 Výsledek' },
     { id: 'reserse', label: '02 Rešerše' },
-    { id: 'obraz', label: '03 Krize obrazu' },
-    { id: 'higgsfield', label: '04 Higgsfield' },
-    { id: 'hlas', label: '05 Hlas' },
-    { id: 'asistent', label: '06 Asistent' },
-    { id: 'vibecoding', label: '07 Vibecoding' },
-    { id: 'obchod', label: '08 Pro obchod' },
+    { id: 'jazyk', label: '03 Vizuální jazyk' },
+    { id: 'obraz', label: '04 Krize obrazu' },
+    { id: 'higgsfield', label: '05 Higgsfield' },
+    { id: 'hlas', label: '06 Hlas' },
+    { id: 'asistent', label: '07 Asistent' },
+    { id: 'vibecoding', label: '08 Vibecoding' },
+    { id: 'obchod', label: '09 Pro obchod' },
   ],
 
   // 01 — Výsledek
@@ -146,6 +147,17 @@ export const caseStudy = {
       { src: '/illustrations/06.png', alt: 'AI ilustrace 6' },
       { src: '/illustrations/07.png', alt: 'AI ilustrace 7' },
       { src: '/illustrations/08.png', alt: 'AI ilustrace 8' },
+    ] satisfies GalleryItem[],
+  },
+
+  // 03 — Vizuální jazyk PEGAS
+  visualLanguage: {
+    intro:
+      'S asistentem jsme postavili vizuální esenci značky: tichý symbol křídla místo celého koně, příroda místo symbolů oboru. Otevřený jazyk, který funguje napříč věkem, vírou i kontextem — bez klišé.',
+    gallery: [
+      { src: '/assistant/vize-01.png', alt: 'Křídlo — tichý symbol přítomnosti' },
+      { src: '/assistant/vize-02.png', alt: 'Příroda místo symbolů oboru — květ' },
+      { src: '/assistant/vize-03.png', alt: 'Příroda místo symbolů oboru — list' },
     ] satisfies GalleryItem[],
   },
 
@@ -249,16 +261,6 @@ export const caseStudy = {
         attribution: 'Nejsme ti, kdo mají pravdu. Jsme ti, kdo pomáhají najít klidný tvar tomu, co cítíte.',
       },
     ],
-    futureVision: {
-      title: 'Vizuální jazyk PEGAS',
-      description:
-        'S asistentem jsme postavili vizuální esenci značky: tichý symbol křídla místo celého koně, příroda místo symbolů oboru. Otevřený jazyk, který funguje napříč věkem, vírou i kontextem — bez klišé.',
-      gallery: [
-        { src: '/assistant/vize-01.png', alt: 'Křídlo — tichý symbol přítomnosti' },
-        { src: '/assistant/vize-02.png', alt: 'Příroda místo symbolů oboru — květ' },
-        { src: '/assistant/vize-03.png', alt: 'Příroda místo symbolů oboru — list' },
-      ] satisfies GalleryItem[],
-    },
   },
 
   // 08 — Vibecoding
