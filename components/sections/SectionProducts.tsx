@@ -95,7 +95,7 @@ export const SectionProducts = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-5 relative">
             {products.adhoc.flow.map((step, index) => (
-              <figure key={index} className="space-y-3 relative">
+              <figure key={index} className="space-y-3">
                 <div className="relative aspect-[3/4] overflow-hidden border border-line bg-cream">
                   <Image
                     src={step.src}
@@ -104,14 +104,6 @@ export const SectionProducts = () => {
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover"
                   />
-                  {index < products.adhoc.flow.length - 1 ? (
-                    <span
-                      aria-hidden
-                      className="hidden lg:flex absolute -right-4 top-1/2 -translate-y-1/2 z-10 w-8 h-8 items-center justify-center bg-cream border border-line rounded-full text-alovy-dark text-lg"
-                    >
-                      →
-                    </span>
-                  ) : null}
                 </div>
                 <figcaption className="space-y-1">
                   <p className="text-xs uppercase tracking-[0.2em] text-alovy-dark">
