@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import { caseStudy } from '@/content/caseStudy';
 import { Gallery } from '@/components/ui/Gallery';
 
@@ -42,6 +44,49 @@ export const SectionImageCrisis = () => {
           </div>
         </div>
 
+        {/* Side-by-side comparison: stock vs. naše AI */}
+        <div className="mt-20 md:mt-24">
+          <p className="text-sm uppercase tracking-[0.2em] text-muted mb-8">
+            Stock vs. naše AI · co najdete a co děláme
+          </p>
+          <div className="space-y-10 md:space-y-12">
+            {imageCrisis.comparison.map((pair, index) => (
+              <div key={index} className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
+                <figure className="space-y-2">
+                  <div className="relative aspect-[4/3] overflow-hidden border border-line bg-cream">
+                    <Image
+                      src={pair.stock.src}
+                      alt={pair.stock.alt}
+                      fill
+                      sizes="(max-width: 640px) 100vw, 50vw"
+                      className="object-cover grayscale opacity-80"
+                    />
+                  </div>
+                  <figcaption className="text-xs uppercase tracking-[0.2em] text-muted">
+                    Stock · co je k dispozici
+                  </figcaption>
+                </figure>
+
+                <figure className="space-y-2">
+                  <div className="relative aspect-[4/3] overflow-hidden border border-line bg-cream">
+                    <Image
+                      src={pair.ai.src}
+                      alt={pair.ai.alt}
+                      fill
+                      sizes="(max-width: 640px) 100vw, 50vw"
+                      className="object-cover"
+                    />
+                  </div>
+                  <figcaption className="text-xs uppercase tracking-[0.2em] text-alovy-dark">
+                    Naše AI · co jsme vyrobili
+                  </figcaption>
+                </figure>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Plná galerie AI ilustrací pro PEGAS */}
         <div className="mt-20 md:mt-24">
           <p className="text-sm uppercase tracking-[0.2em] text-muted mb-6">
             Galerie · AI ilustrace pro PEGAS

@@ -117,6 +117,20 @@ export const caseStudy = {
 
   // 03 — Krize obrazu
   imageCrisis: {
+    comparison: [
+      {
+        stock: { src: '/illustrations/stock-01.jpg', alt: 'Stockový americký pohřeb' },
+        ai: { src: '/illustrations/ai-01.png', alt: 'Naše AI ilustrace 1' },
+      },
+      {
+        stock: { src: '/illustrations/stock-02.jpg', alt: 'Stockový hřbitov, slzy' },
+        ai: { src: '/illustrations/ai-02.png', alt: 'Naše AI ilustrace 2' },
+      },
+      {
+        stock: { src: '/illustrations/stock-03.jpg', alt: 'Stockové symboly smutku' },
+        ai: { src: '/illustrations/ai-03.png', alt: 'Naše AI ilustrace 3' },
+      },
+    ] satisfies { stock: GalleryItem; ai: GalleryItem }[],
     problem:
       'Otevřete stockovou banku. Hledáte fotky pohřebnictví. Najdete americké hřbitovy, hromady věnců, slzy. Středoevropská vizualita oboru chybí, a co je, jsou symboly hrůzy — deprese, kříže, černo.',
     traditionalSolution:
