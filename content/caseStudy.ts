@@ -210,10 +210,10 @@ export const caseStudy = {
       description:
         'Sezónní propagace, produktové listy do tisku, dárkové sety. Bez čekání na fotografa, bez studia, bez týdenního cyklu.',
       items: [
-        { src: '/products/adhoc-01.png', alt: 'Sezónní materiál 1', label: 'Sezónní · vánoce' },
-        { src: '/products/adhoc-02.png', alt: 'Produktový list', label: 'Produktový list · tisk' },
-        { src: '/products/adhoc-03.png', alt: 'Dárkový set', label: 'Dárkový set' },
-        { src: '/products/adhoc-04.png', alt: 'Pamětní karta', label: 'Pamětní karta' },
+        { src: '/products/adhoc-01.png', alt: 'Produktový katalog rakví', label: 'Produktový katalog' },
+        { src: '/products/adhoc-02.png', alt: 'Tištěný produktový list', label: 'Produktový list · tisk' },
+        { src: '/products/adhoc-03.png', alt: 'Sezónní věnec', label: 'Sezónní věnec' },
+        { src: '/products/adhoc-04.png', alt: 'Pamětní dekorace', label: 'Pamětní dekorace' },
       ] satisfies PrintMaterial[],
     },
     takeaway:
