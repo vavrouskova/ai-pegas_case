@@ -136,7 +136,7 @@ export const caseStudy = {
     traditionalSolution:
       'Klasická cesta: vlastní focení. Drahé, časově náročné, a stejně narazíte na to, že fotka konkrétního smutku nemusí být to, co web chce sdělit.',
     aiSolution:
-      'S našimi AI ilustracemi obcházíme konkrétnost. Vyvoláváme klid. Pracujeme se symbolikou bez doslovnosti — strom místo hřbitova, vlna místo věnce.',
+      'Naše AI ilustrace stojí na běžných okamžicích — lidé, dotyk, pohled, ticho. Žádné hřbitovy, žádné slzy, žádné kříže. Středoevropské tváře, brand-aligned tóny, klid. Tam, kde stock nabízí drama, my nabízíme přítomnost.',
     gallery: [
       { src: '/illustrations/01.png', alt: 'AI ilustrace 1' },
       { src: '/illustrations/02.png', alt: 'AI ilustrace 2' },
@@ -186,7 +186,7 @@ export const caseStudy = {
     regeneration: {
       title: 'Regenerace produktů',
       description:
-        'Zrovna teď regenerujeme všechny rakve. Klient pošle původní fotku, my dodáme čistou produktovou v brandové linii PEGAS. Ukázky před a po:',
+        'Zrovna teď regenerujeme celý katalog — rakve, kompozice, prostředí. Někdy přefotí pozadí, jindy přesvítí, jindy předěláme kompletně. Cíl je vždy stejný: čistá produktová fotka v brandové linii PEGAS. Ukázky:',
       pairs: [
         {
           before: { src: '/products/rakev-01-before.jpg', alt: 'Rakev — původní snímek 1' },
@@ -260,7 +260,7 @@ export const caseStudy = {
       'Píšeme s ním brand copy a web texty v drženém tónu.',
       'Brainstormujeme s ním postupy a nápady k projektům.',
       'Generujeme s ním první ilustrace (vstup do sekce 03).',
-      'Kreslíme s ním vize budoucnosti — speculative vizualizace pro klientské pitche.',
+      'Stavíme s ním vizuální esenci značky — symboly, jazyk, otevřené motivy bez klišé oboru.',
       'Není to senior nástroj. Trefuje se ale dobře — a šetří nám každodenní rutinu.',
     ],
     screenshots: [
@@ -287,13 +287,13 @@ export const caseStudy = {
       },
     ],
     futureVision: {
-      title: 'Vize budoucnosti',
+      title: 'Vizuální jazyk PEGAS',
       description:
-        'Ukázka, kam s asistentem značku dokážeme posunout: speculative vizualizace prostorů, kampaní, produktových konceptů. Pro klientské pitche a interní směr.',
+        'S asistentem jsme postavili vizuální esenci značky: tichý symbol křídla místo celého koně, příroda místo symbolů oboru. Otevřený jazyk, který funguje napříč věkem, vírou i kontextem — bez klišé.',
       gallery: [
-        { src: '/assistant/vize-01.png', alt: 'Vize budoucnosti 1' },
-        { src: '/assistant/vize-02.png', alt: 'Vize budoucnosti 2' },
-        { src: '/assistant/vize-03.png', alt: 'Vize budoucnosti 3' },
+        { src: '/assistant/vize-01.png', alt: 'Křídlo — tichý symbol přítomnosti' },
+        { src: '/assistant/vize-02.png', alt: 'Příroda místo symbolů oboru — květ' },
+        { src: '/assistant/vize-03.png', alt: 'Příroda místo symbolů oboru — list' },
       ] satisfies GalleryItem[],
     },
   },
