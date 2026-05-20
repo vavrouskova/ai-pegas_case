@@ -65,10 +65,9 @@ export const SectionAssistant = () => {
           </a>
         </div>
 
-        {/* Brand voice excerpts — ukázky výstupu */}
         <div className="mt-20 md:mt-24">
           <p className="text-sm uppercase tracking-[0.2em] text-muted mb-8">
-            Brand voice · ukázky výstupu
+            Ukázky odpovědí asistenta
           </p>
           <div className="grid md:grid-cols-2 gap-6 md:gap-8">
             {assistant.brandVoice.map((sample, index) => (
