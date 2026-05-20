@@ -153,7 +153,7 @@ export const caseStudy = {
   // 03 — Vizuální jazyk PEGAS
   visualLanguage: {
     intro:
-      'S asistentem jsme postavili vizuální esenci značky: tichý symbol křídla místo celého koně, příroda místo symbolů oboru. Otevřený jazyk, který funguje napříč věkem, vírou i kontextem — bez klišé.',
+      "S asistentem jsme značce PEGAS postavili vlastní vizuální jazyk. Nezaměnitelný, čitelný, signifikantní. Křídlo místo celého koně. Příroda místo symbolů oboru. Otevřený motiv napříč věkem, vírou i kontextem.",
     gallery: [
       { src: '/assistant/vize-01.png', alt: 'Křídlo — tichý symbol přítomnosti' },
       { src: '/assistant/vize-02.png', alt: 'Příroda místo symbolů oboru — květ' },
