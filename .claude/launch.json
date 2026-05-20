@@ -2,11 +2,11 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "usecase-pegas-dev",
+      "name": "studaiant-case-dev",
       "runtimeExecutable": "bun",
       "runtimeArgs": ["run", "dev"],
       "port": 3000,
-      "cwd": "/Users/vendy/Desktop/usecase-pegas"
+      "cwd": "/Users/vendy/Desktop/studaiant-case"
     }
   ]
 }

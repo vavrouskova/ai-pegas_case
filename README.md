@@ -1,4 +1,4 @@
-# usecase-pegas
+# studaiant-case
 
 studAIant case study — PEGAS. Jak antstudio postavilo brand a web PEGAS s pomocí AI.
 
