@@ -33,6 +33,13 @@ export interface PrintMaterial {
   label: string;
 }
 
+export interface FlowStep {
+  src: string;
+  alt: string;
+  label: string;
+  caption: string;
+}
+
 export const caseStudy = {
   hero: {
     label: 'studAIant · case study',
@@ -206,15 +213,35 @@ export const caseStudy = {
       ] satisfies BeforeAfterPair[],
     },
     adhoc: {
-      title: 'Ad-hoc materiály',
+      title: 'Z mobilu do binderu na každé pobočce',
       description:
-        'Sezónní propagace, produktové listy do tisku, dárkové sety. Bez čekání na fotografa, bez studia, bez týdenního cyklu.',
-      items: [
-        { src: '/products/adhoc-01.png', alt: 'Produktový katalog rakví', label: 'Produktový katalog' },
-        { src: '/products/adhoc-02.png', alt: 'Tištěný produktový list', label: 'Produktový list · tisk' },
-        { src: '/products/adhoc-03.png', alt: 'Sezónní věnec', label: 'Sezónní věnec' },
-        { src: '/products/adhoc-04.png', alt: 'Pamětní dekorace', label: 'Pamětní dekorace' },
-      ] satisfies PrintMaterial[],
+        'Florista uváže věnec, vyfotí mobilem na betonu za pobočkou. My uděláme AI studio shot, zařadíme do produktového listu v brandové linii PEGAS — a binder s aktuální sezónou jede na pobočky dřív, než odkvetou macešky.',
+      flow: [
+        {
+          src: '/products/flow-01-mobile.jpg',
+          alt: 'Mobilní snímek věnce na konstrukci za pobočkou',
+          label: '01 · Mobil',
+          caption: 'Florista uváže, vyfotí na pozadí betonu. Žádné světla, žádný studio setup.',
+        },
+        {
+          src: '/products/flow-02-studio.jpg',
+          alt: 'AI studio shot věnce na bílém pozadí',
+          label: '02 · AI studio',
+          caption: 'Cleanup pozadí, sjednocení nasvícení, brand-aligned tóny.',
+        },
+        {
+          src: '/products/flow-03-sheet.jpg',
+          alt: 'PEGAS produktový list — JARO 1',
+          label: '03 · Produktový list',
+          caption: 'Layout v PEGAS šabloně. Náhledy + detail + popis + parametry.',
+        },
+        {
+          src: '/products/flow-04-binder.jpg',
+          alt: 'Fialový kroužkový binder s produktovými listy na pobočce',
+          label: '04 · Binder na pobočce',
+          caption: 'Sezónní binder do každé pobočky. Aktuální nabídka po ruce.',
+        },
+      ] satisfies FlowStep[],
     },
     takeaway:
       'Klient přijde s katalogem ve smíšené kvalitě. Za týden má všechno v jedné vizuální linii. Bez focení, bez retušérů.',
