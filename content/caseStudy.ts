@@ -44,7 +44,7 @@ export const caseStudy = {
   hero: {
     label: 'studAIant · case study',
     title: 'Brand PEGAS jsme postavili s AI.',
-    subtitle: 'Texty · Ilustrace · Foto · Produkty · Hlas · Rešerše · Code',
+    subtitle: 'Texty · Ilustrace · Foto · Hlas · Rešerše · Code',
     meta: '2025–2026 · antstudio × PEGAS',
     cta: 'Skroluj',
   },
@@ -54,17 +54,16 @@ export const caseStudy = {
     { id: 'reserse', label: '02 Rešerše' },
     { id: 'obraz', label: '03 Krize obrazu' },
     { id: 'higgsfield', label: '04 Higgsfield' },
-    { id: 'produkty', label: '05 Produkty' },
-    { id: 'hlas', label: '06 Hlas' },
-    { id: 'asistent', label: '07 Asistent' },
-    { id: 'vibecoding', label: '08 Vibecoding' },
-    { id: 'obchod', label: '09 Pro obchod' },
+    { id: 'hlas', label: '05 Hlas' },
+    { id: 'asistent', label: '06 Asistent' },
+    { id: 'vibecoding', label: '07 Vibecoding' },
+    { id: 'obchod', label: '08 Pro obchod' },
   ],
 
   // 01 — Výsledek
   result: {
     intro:
-      'Sedm oblastí, ve kterých v antu používáme AI jako nástroj na klientských projektech. Tohle umíme dělat — a umíme to prodat dál.',
+      'Šest oblastí, ve kterých v antu používáme AI jako nástroj na klientských projektech. Tohle umíme dělat — a umíme to prodat dál.',
     areas: [
       {
         number: '01',
@@ -82,7 +81,7 @@ export const caseStudy = {
         number: '03',
         title: 'Foto (Higgsfield)',
         description:
-          'Z mobilního snímku přes cleanup v Higgsfieldu uděláme produktovou fotku připravenou na e-shop. Hodiny místo dnů.',
+          'Z mobilního snímku přes cleanup v Higgsfieldu uděláme produktovou fotku, list a binder na pobočce. Hodiny místo dnů.',
       },
       {
         number: '04',
@@ -92,18 +91,12 @@ export const caseStudy = {
       },
       {
         number: '05',
-        title: 'Produkty',
-        description:
-          'Regenerujeme produktové fotky (rakve před/po), vyrábíme sezónní materiály a tištěné produktové listy. Z katalogu do jednotné vizuální linie za týden.',
-      },
-      {
-        number: '06',
         title: 'Hlas',
         description:
           'Postavili jsme 30minutovou prezentaci značky s AI voiceoverem, interní prezentaci pro firmu a pilotní brand podcast.',
       },
       {
-        number: '07',
+        number: '06',
         title: 'Code',
         description:
           'S Claude Code stavíme features — kalendář obřadů, parte editor, wizard pro objednání květin za dny místo týdnů.',
@@ -156,95 +149,38 @@ export const caseStudy = {
     ] satisfies GalleryItem[],
   },
 
-  // 04 — Higgsfield
+  // 04 — Higgsfield (mobile → studio → list → binder pipeline)
   higgsfield: {
     intro:
-      'Naše vlajková ukázka, kterou umíme nabídnout dalším klientům. Pipeline z Vazárny:',
-    steps: [
-      'Florista uváže nový produkt v Vazárně.',
-      'Vyfotí ho mobilem. Žádné světla, žádný studio setup.',
-      'Pošle nám fotku.',
-      'Uděláme cleanup v Higgsfieldu a brand-aligned úpravu.',
-      'Nahodíme na e-shop. Hodiny místo dnů.',
-    ],
-    pairs: [
+      'Naše vlajková ukázka pro klienta PEGAS — a kterou umíme nabídnout dalším klientům. Z mobilního snímku za pobočkou do binderu s aktuální sezónou. Hodiny místo dnů, bez focení a bez retušérů.',
+    flow: [
       {
-        before: { src: '/higgsfield/01-before.jpg', alt: 'Mobilní snímek 1' },
-        after: { src: '/higgsfield/01-after.jpg', alt: 'AI cleanup 1' },
-        note: 'Vazba č. 1 — z mobilu do e-shopu',
+        src: '/products/flow-01-mobile.jpg',
+        alt: 'Mobilní snímek věnce na konstrukci za pobočkou',
+        label: '01 · Mobil',
+        caption: 'Florista uváže, vyfotí na pozadí betonu. Žádné světla, žádný studio setup.',
       },
       {
-        before: { src: '/higgsfield/02-before.jpg', alt: 'Mobilní snímek 2' },
-        after: { src: '/higgsfield/02-after.jpg', alt: 'AI cleanup 2' },
-        note: 'Vazba č. 2',
+        src: '/products/flow-02-studio.jpg',
+        alt: 'AI studio detail květin v plné kvalitě',
+        label: '02 · AI studio',
+        caption: 'Cleanup pozadí, sjednocení nasvícení, detail v plné kvalitě.',
       },
       {
-        before: { src: '/higgsfield/03-before.jpg', alt: 'Mobilní snímek 3' },
-        after: { src: '/higgsfield/03-after.jpg', alt: 'AI cleanup 3' },
-        note: 'Vazba č. 3',
+        src: '/products/flow-03-sheet.jpg',
+        alt: 'PEGAS produktový list — JARO 1',
+        label: '03 · Produktový list',
+        caption: 'Layout v PEGAS šabloně. Náhledy + detail + popis + parametry.',
       },
-    ] satisfies BeforeAfterPair[],
-  },
-
-  // 05 — Produkty (regenerace + ad-hoc materiály)
-  products: {
-    intro:
-      'Klient má katalog produktů — různá kvalita fotek, různá doba focení, různé stylizace. S AI to proženeme do jednotné vizuální linie. Plus vyrábíme ad-hoc materiály: sezónní propagaci, produktové listy do tisku.',
-    regeneration: {
-      title: 'Regenerace produktů',
-      description:
-        'Zrovna teď regenerujeme celý katalog — rakve, kompozice, prostředí. Někdy přefotí pozadí, jindy přesvítí, jindy předěláme kompletně. Cíl je vždy stejný: čistá produktová fotka v brandové linii PEGAS. Ukázky:',
-      pairs: [
-        {
-          before: { src: '/products/rakev-01-before.jpg', alt: 'Rakev — původní snímek 1' },
-          after: { src: '/products/rakev-01-after.jpg', alt: 'Rakev — AI regenerace 1' },
-          note: 'Klasická rakev — čištění pozadí, sjednocení nasvícení',
-        },
-        {
-          before: { src: '/products/rakev-02-before.jpg', alt: 'Rakev — původní snímek 2' },
-          after: { src: '/products/rakev-02-after.jpg', alt: 'Rakev — AI regenerace 2' },
-          note: 'Designová rakev — důraz na detail materiálu',
-        },
-        {
-          before: { src: '/products/rakev-03-before.jpg', alt: 'Rakev — původní snímek 3' },
-          after: { src: '/products/rakev-03-after.jpg', alt: 'Rakev — AI regenerace 3' },
-          note: 'Dětská rakev — citlivá vizuální úprava',
-        },
-      ] satisfies BeforeAfterPair[],
-    },
-    adhoc: {
-      title: 'Z mobilu do binderu na každé pobočce',
-      description:
-        'Florista uváže věnec, vyfotí mobilem na betonu za pobočkou. My uděláme AI studio shot, zařadíme do produktového listu v brandové linii PEGAS — a binder s aktuální sezónou jede na pobočky dřív, než odkvetou macešky.',
-      flow: [
-        {
-          src: '/products/flow-01-mobile.jpg',
-          alt: 'Mobilní snímek věnce na konstrukci za pobočkou',
-          label: '01 · Mobil',
-          caption: 'Florista uváže, vyfotí na pozadí betonu. Žádné světla, žádný studio setup.',
-        },
-        {
-          src: '/products/flow-02-studio.jpg',
-          alt: 'AI studio detail květin v plné kvalitě',
-          label: '02 · AI studio',
-          caption: 'Cleanup pozadí, sjednocení nasvícení, detail v plné kvalitě.',
-        },
-        {
-          src: '/products/flow-03-sheet.jpg',
-          alt: 'PEGAS produktový list — JARO 1',
-          label: '03 · Produktový list',
-          caption: 'Layout v PEGAS šabloně. Náhledy + detail + popis + parametry.',
-        },
-        {
-          src: '/products/flow-04-binder.jpg',
-          alt: 'Fialový kroužkový binder s produktovými listy na pobočce',
-          label: '04 · Binder na pobočce',
-          caption: 'Sezónní binder do každé pobočky. Aktuální nabídka po ruce.',
-        },
-      ] satisfies FlowStep[],
-    },
+      {
+        src: '/products/flow-04-binder.jpg',
+        alt: 'Fialový kroužkový binder s produktovými listy na pobočce',
+        label: '04 · Binder na pobočce',
+        caption: 'Sezónní binder do každé pobočky. Aktuální nabídka po ruce.',
+      },
+    ] satisfies FlowStep[],
     takeaway:
-      'Klient přijde s katalogem ve smíšené kvalitě. Za týden má všechno v jedné vizuální linii. Bez focení, bez retušérů.',
+      'Klient přijde s katalogem ve smíšené kvalitě. Za týden má všechno v jedné vizuální linii.',
   },
 
   // 06 — Hlas (prezentace + podcast)

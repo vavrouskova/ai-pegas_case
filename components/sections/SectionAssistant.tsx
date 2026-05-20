@@ -12,7 +12,7 @@ export const SectionAssistant = () => {
         <div className="grid md:grid-cols-12 gap-10">
           <div className="md:col-span-4">
             <div className="text-sm uppercase tracking-[0.2em] text-muted mb-4">
-              07 · Asistent
+              06 · Asistent
             </div>
             <h2 className="font-serif text-5xl md:text-6xl leading-[1.05]">
               Custom ChatGPT,

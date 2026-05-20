@@ -16,69 +16,44 @@ export const SectionHiggsfield = () => {
             <h2 className="font-serif text-5xl md:text-6xl leading-[1.05]">
               Z mobilu
               <br />
-              <em className="text-alovy not-italic">na e-shop</em>
+              <em className="text-alovy not-italic">do binderu</em>
               <br />
-              za hodiny.
+              na každé pobočce.
             </h2>
           </div>
-          <div className="md:col-span-7 md:col-start-6 space-y-8">
+          <div className="md:col-span-7 md:col-start-6">
             <p className="text-lg md:text-xl leading-relaxed">{higgsfield.intro}</p>
-            <ol className="space-y-4">
-              {higgsfield.steps.map((step, index) => (
-                <li key={index} className="flex items-start gap-4 text-muted">
-                  <span className="font-serif text-alovy text-lg shrink-0 w-8 pt-0.5">
-                    0{index + 1}
-                  </span>
-                  <p className="leading-relaxed">{step}</p>
-                </li>
-              ))}
-            </ol>
           </div>
         </div>
 
-        <div className="mt-20 md:mt-24 space-y-16">
-          <p className="text-sm uppercase tracking-[0.2em] text-muted">
-            Před a po · ukázky z Vazárny
-          </p>
-
-          {higgsfield.pairs.map((pair, index) => (
-            <div key={index} className="space-y-3">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
-                <figure className="space-y-2">
-                  <div className="relative aspect-[3/4] overflow-hidden border border-line bg-cream">
-                    <Image
-                      src={pair.before.src}
-                      alt={pair.before.alt}
-                      fill
-                      sizes="(max-width: 640px) 100vw, 50vw"
-                      className="object-cover"
-                    />
-                  </div>
-                  <figcaption className="text-xs uppercase tracking-[0.2em] text-muted">
-                    Mobil
-                  </figcaption>
-                </figure>
-
-                <figure className="space-y-2">
-                  <div className="relative aspect-[3/4] overflow-hidden border border-line bg-cream">
-                    <Image
-                      src={pair.after.src}
-                      alt={pair.after.alt}
-                      fill
-                      sizes="(max-width: 640px) 100vw, 50vw"
-                      className="object-cover"
-                    />
-                  </div>
-                  <figcaption className="text-xs uppercase tracking-[0.2em] text-alovy-dark">
-                    Higgsfield + brand
-                  </figcaption>
-                </figure>
+        <div className="mt-16 md:mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-5">
+          {higgsfield.flow.map((step, index) => (
+            <figure key={index} className="space-y-3">
+              <div className="relative aspect-[3/4] overflow-hidden border border-line bg-cream">
+                <Image
+                  src={step.src}
+                  alt={step.alt}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover"
+                />
               </div>
-              {pair.note ? (
-                <p className="text-sm text-muted italic">{pair.note}</p>
-              ) : null}
-            </div>
+              <figcaption className="space-y-1">
+                <p className="text-xs uppercase tracking-[0.2em] text-alovy-dark">
+                  {step.label}
+                </p>
+                <p className="text-sm text-muted leading-relaxed">{step.caption}</p>
+              </figcaption>
+            </figure>
           ))}
+        </div>
+
+        <div className="mt-16 md:mt-20 max-w-3xl">
+          <p className="font-serif text-2xl md:text-3xl leading-tight">
+            <span className="text-alovy">„</span>
+            {higgsfield.takeaway}
+            <span className="text-alovy">"</span>
+          </p>
         </div>
       </div>
     </section>
