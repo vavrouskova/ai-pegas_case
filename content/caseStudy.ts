@@ -225,9 +225,9 @@ export const caseStudy = {
         },
         {
           src: '/products/flow-02-studio.jpg',
-          alt: 'AI studio shot věnce na bílém pozadí',
+          alt: 'AI studio detail květin v plné kvalitě',
           label: '02 · AI studio',
-          caption: 'Cleanup pozadí, sjednocení nasvícení, brand-aligned tóny.',
+          caption: 'Cleanup pozadí, sjednocení nasvícení, detail v plné kvalitě.',
         },
         {
           src: '/products/flow-03-sheet.jpg',
