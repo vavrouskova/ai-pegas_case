@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import { caseStudy } from '@/content/caseStudy';
 import { Gallery } from '@/components/ui/Gallery';
 
@@ -28,6 +30,59 @@ export const SectionAssistant = () => {
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+
+        {/* Živá karta asistenta na chatgpt.com */}
+        <div className="mt-16 md:mt-20">
+          <p className="text-sm uppercase tracking-[0.2em] text-muted mb-6">
+            Živý asistent · spuštěný na chatgpt.com
+          </p>
+          <a
+            href={assistant.live.url}
+            target="_blank"
+            rel="noreferrer"
+            className="block border border-line p-6 md:p-8 card-hover"
+          >
+            <div className="flex items-center gap-6 md:gap-8">
+              <div className="relative w-20 h-20 md:w-28 md:h-28 shrink-0 border border-line bg-cream overflow-hidden">
+                <Image
+                  src={assistant.live.logo}
+                  alt={`Logo ${assistant.live.name}`}
+                  fill
+                  sizes="112px"
+                  className="object-contain"
+                />
+              </div>
+              <div className="flex-1 min-w-0">
+                <h3 className="font-serif text-xl md:text-2xl">{assistant.live.name}</h3>
+                <p className="mt-2 text-sm md:text-base text-muted">{assistant.live.tagline}</p>
+                <p className="mt-4 text-xs uppercase tracking-[0.2em] text-alovy-dark">
+                  chatgpt.com ↗
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        {/* Brand voice excerpts — ukázky výstupu */}
+        <div className="mt-20 md:mt-24">
+          <p className="text-sm uppercase tracking-[0.2em] text-muted mb-8">
+            Brand voice · ukázky výstupu
+          </p>
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+            {assistant.brandVoice.map((sample, index) => (
+              <article
+                key={index}
+                className="border border-line p-6 md:p-8 space-y-4 card-hover"
+              >
+                <h3 className="font-serif text-lg md:text-xl">{sample.title}</h3>
+                <p className="text-base leading-relaxed text-muted">{sample.body}</p>
+                <p className="text-xs uppercase tracking-[0.2em] text-alovy-dark pt-2 border-t border-line">
+                  {sample.attribution}
+                </p>
+              </article>
+            ))}
           </div>
         </div>
 

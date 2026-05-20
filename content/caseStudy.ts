@@ -268,6 +268,24 @@ export const caseStudy = {
       { src: '/assistant/02.png', alt: 'Ukázka konverzace 2' },
       { src: '/assistant/03.png', alt: 'Ukázka konverzace 3' },
     ] satisfies ConversationSample[],
+    live: {
+      name: 'Asistent značky PEGAS',
+      tagline: 'Důstojný průvodce komunikací a koncepcí značky.',
+      url: 'https://chatgpt.com/', // TODO: vendy doplní konkrétní URL custom GPT
+      logo: '/assistant/pegas-logo.png',
+    },
+    brandVoice: [
+      {
+        title: 'Co je cílem každé aplikace značky PEGAS?',
+        body: 'Cílem každé aplikace značky PEGAS je měnit pohled na rozloučení. Ne silou. Ne provokací. Ale klidem, krásou a přítomností. Smrt bývá téma, které odsouváme — dokud se nás samo nedotkne. PEGAS pro něj vytváří prostor: bez tlaku, bez hotových odpovědí, s úctou k tomu, že každý prožívá ztrátu jinak.',
+        attribution: '„Čím více jsme zapojeni do smrti, tím zdravěji truchlíme." — Caitlin Doughty',
+      },
+      {
+        title: 'Kdo je tedy PEGAS?',
+        body: 'PEGAS není učitelka, která ví, co je správně. PEGAS je osoba, která se posadí vedle vás. Vyslechne. Ztiší prostor. A pomůže najít podobu, která dává smysl vám. Neopravuje, nekárá, nepoučuje. Spíš se ptá: „Co bylo pro něj důležité?" „Co by vám pomohlo?"',
+        attribution: 'Nejsme ti, kdo mají pravdu. Jsme ti, kdo pomáhají najít klidný tvar tomu, co cítíte.',
+      },
+    ],
     futureVision: {
       title: 'Vize budoucnosti',
       description:
