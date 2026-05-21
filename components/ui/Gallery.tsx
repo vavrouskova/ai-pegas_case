@@ -13,6 +13,7 @@ interface GalleryProps {
   columns?: 2 | 3 | 4;
   aspect?: 'square' | 'portrait' | 'landscape';
   className?: string;
+  grayscale?: boolean;
 }
 
 const columnsClass = {
@@ -32,6 +33,7 @@ export const Gallery = ({
   columns = 3,
   aspect = 'square',
   className,
+  grayscale = false,
 }: GalleryProps) => {
   return (
     <div className={cn('grid gap-4 md:gap-5', columnsClass[columns], className)}>
@@ -48,7 +50,7 @@ export const Gallery = ({
               alt={item.alt}
               fill
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              className="object-cover"
+              className={cn('object-cover', grayscale && 'grayscale opacity-80')}
             />
           </div>
           {item.caption ? (

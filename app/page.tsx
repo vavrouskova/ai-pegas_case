@@ -4,7 +4,9 @@ import { Hero } from '@/components/Hero';
 import { SectionAssistant } from '@/components/sections/SectionAssistant';
 import { SectionHiggsfield } from '@/components/sections/SectionHiggsfield';
 import { SectionImageCrisis } from '@/components/sections/SectionImageCrisis';
+import { SectionProductRework } from '@/components/sections/SectionProductRework';
 import { SectionResearch } from '@/components/sections/SectionResearch';
+import { SectionTeamPortraits } from '@/components/sections/SectionTeamPortraits';
 import { SectionResult } from '@/components/sections/SectionResult';
 import { SectionSales } from '@/components/sections/SectionSales';
 import { SectionVibecoding } from '@/components/sections/SectionVibecoding';
@@ -22,6 +24,8 @@ const Page = () => {
         <SectionResearch />
         <SectionVisualLanguage />
         <SectionImageCrisis />
+        <SectionProductRework />
+        <SectionTeamPortraits />
         <SectionHiggsfield />
         <SectionVoice />
         <SectionAssistant />

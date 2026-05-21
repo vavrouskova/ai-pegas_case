@@ -1,5 +1,6 @@
+import Image from 'next/image';
+
 import { caseStudy } from '@/content/caseStudy';
-import { Gallery } from '@/components/ui/Gallery';
 
 export const SectionVibecoding = () => {
   const { vibecoding } = caseStudy;
@@ -10,7 +11,7 @@ export const SectionVibecoding = () => {
         <div className="grid md:grid-cols-12 gap-10">
           <div className="md:col-span-4">
             <div className="text-sm uppercase tracking-[0.2em] text-muted mb-4">
-              08 · Vibecoding
+              10 · Vibecoding
             </div>
             <h2 className="font-serif text-5xl md:text-6xl leading-[1.05]">
               Features za <em className="text-alovy not-italic">dny</em>
@@ -34,8 +35,42 @@ export const SectionVibecoding = () => {
           </div>
         </div>
 
-        <div className="mt-16">
-          <Gallery items={vibecoding.screenshots} columns={3} aspect="landscape" />
+        <div className="mt-16 grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
+          {vibecoding.screenshots.map((shot, index) => {
+            const inner = (
+              <>
+                <div className="relative overflow-hidden border border-line bg-cream aspect-[4/3]">
+                  <Image
+                    src={shot.src}
+                    alt={shot.alt}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+                    className="object-cover"
+                  />
+                </div>
+                {shot.liveLabel ? (
+                  <p className="text-xs uppercase tracking-[0.2em] text-alovy-dark pt-1">
+                    {shot.liveLabel} ↗
+                  </p>
+                ) : null}
+              </>
+            );
+            return shot.liveUrl ? (
+              <a
+                key={index}
+                href={shot.liveUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="space-y-2 card-hover block"
+              >
+                {inner}
+              </a>
+            ) : (
+              <figure key={index} className="space-y-2">
+                {inner}
+              </figure>
+            );
+          })}
         </div>
       </div>
     </section>
