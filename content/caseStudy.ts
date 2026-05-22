@@ -626,6 +626,16 @@ export const caseStudy = {
           'Mobilní snímky proměníme v produktové fotky. Pro e-shopy s rychlým produktovým cyklem.',
       },
       {
+        title: 'Firemní portréty z mobilu',
+        description:
+          'Z mobilního snímku z chodby pobočky postavíme studio portrét. Sjednocený tým na webu bez focení — funguje i u lidí, co před fotografa nechtějí.',
+      },
+      {
+        title: 'Prezentace, podcasty, panely',
+        description:
+          'Brand prezentace s AI voiceoverem, podcast formát, panely a diskuze s více mluvčími. Plán: vlastní avataři antstudia jako stálé tváře — místo nákladných realizací.',
+      },
+      {
         title: 'Vibecoding · funkční frontend',
         description:
           'Frontend přímo v kódu, ne ve Figmě. Kalendáře, wizards, editory za dny — s klientem se bavíme rovnou na pohyblivém modelu, ne nad statickým návrhem.',
