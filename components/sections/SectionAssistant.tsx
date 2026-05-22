@@ -64,7 +64,7 @@ export const SectionAssistant = () => {
                 key={index}
                 className="border border-line p-6 md:p-10 space-y-6 md:space-y-8 bg-cream/40"
               >
-                <p className="text-xs uppercase tracking-[0.2em] text-alovy-dark">
+                <p className="text-xs uppercase tracking-[0.2em] text-muted">
                   {sample.tag}
                 </p>
 

@@ -490,7 +490,7 @@ export const caseStudy = {
     conversations: [
       {
         tag: 'Tón značky · 3 ano/ne',
-        prompt: 'Napiš mi krátké ukázky jak PEGAS komunikuje a jak ne, tři příklady.',
+        prompt: 'Napiš mi krátké ukázky, jak PEGAS komunikuje a jak ne. Tři příklady.',
         responseLead:
           'Tady jsou tři krátké kontrasty, v duchu manuálu PEGAS: klidně, osobně, bez tlaku a bez prázdných frází.',
         contrasts: [
@@ -621,7 +621,7 @@ export const caseStudy = {
       {
         title: 'AI ilustrace v identitě značky',
         description:
-          'Fotobanky jsou mrtvé. AI ilustrace držíme jako součást identity značky — tam, kde fotka je moc. Nejen u citlivých témat.',
+          'Fotobanky jsou mrtvé. AI ilustrace držíme jako součást identity značky — tam, kde fotka je moc. Bez závislosti na jednom tvůrci, bez čekání. Nejen u citlivých témat.',
       },
       {
         title: 'Higgsfield foto workflow',
