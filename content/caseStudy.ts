@@ -96,9 +96,9 @@ export const caseStudy = {
     areas: [
       {
         number: '01',
-        title: 'Texty',
+        title: 'Rešerše',
         description:
-          'Píšeme copy, brand statementy a web texty s AI asistentem trénovaným na klientovu značku. Brainstormujeme s ním a držíme konzistentní tón.',
+          'Děláme zahraniční benchmarks, konkurenční analýzy, prohlubujeme pochopení citlivých témat.',
       },
       {
         number: '02',
@@ -114,15 +114,15 @@ export const caseStudy = {
       },
       {
         number: '04',
-        title: 'Rešerše',
-        description:
-          'Děláme zahraniční benchmarks, konkurenční analýzy, prohlubujeme pochopení citlivých témat.',
-      },
-      {
-        number: '05',
         title: 'Hlas',
         description:
           'Postavili jsme 30minutovou prezentaci značky s AI voiceoverem, interní prezentaci pro firmu a pilotní brand podcast.',
+      },
+      {
+        number: '05',
+        title: 'Texty',
+        description:
+          'Píšeme copy, brand statementy a web texty s AI asistentem trénovaným na klientovu značku. Brainstormujeme s ním a držíme konzistentní tón.',
       },
       {
         number: '06',
@@ -262,7 +262,7 @@ export const caseStudy = {
       ] satisfies GalleryItem[],
     },
     takeaway:
-      'Téma samo o sobě bolí. Nemusíme dostávat šíp do oka u každé další rakve.',
+      'Téma samo o sobě bolí. Nemusíme dostávat šípem do oka u každé další rakve.',
   },
 
   // 08 — Tým (portréty zaměstnanců — komplikované focení, AI cleanup)
@@ -338,23 +338,23 @@ export const caseStudy = {
       items: [
         {
           src: '/products/katalog-kvetin-zdroj-01.png',
-          alt: 'Strana katalogu Kytice na rakev — typografické zpracování z roku 2015',
+          alt: 'Strana katalogu Kytice na rakev — karafiáty KR1 a minikarafiáty KR1B',
         },
         {
-          src: '/products/katalog-kvetin-zdroj-02.png',
-          alt: 'Strana katalogu Kytice na rakev — varianty s karafiáty a chryzantémami',
+          src: '/products/katalog-kvetin-zdroj-08.png',
+          alt: 'Strana katalogu Variace — exkluzivní kytice EX5 lilie/anturie a EX6 slunečnice/kaly/kopretinové chryzantémy',
         },
         {
-          src: '/products/katalog-kvetin-zdroj-03.png',
-          alt: 'Strana katalogu Věnce a vzpomínkové kytičky',
+          src: '/products/katalog-kvetin-zdroj-09.png',
+          alt: 'Strana katalogu Kytice volně vázané — VV2C jednokvěté chryzantémy/růže, VV3 růže, VV4 gerbery',
+        },
+        {
+          src: '/products/katalog-kvetin-zdroj-10.png',
+          alt: 'Strana katalogu Smuteční věnce — karafiáty V1C a V1D',
         },
         {
           src: '/products/katalog-kvetin-zdroj-04.png',
           alt: 'Strana katalogu Vzorová aranžmá',
-        },
-        {
-          src: '/products/katalog-kvetin-zdroj-05.png',
-          alt: 'Obálka katalogu 2015 — kytice z rudých růží',
         },
         {
           src: '/products/katalog-kvetin-zdroj-06.png',
@@ -426,6 +426,22 @@ export const caseStudy = {
           src: '/products/kvetiny-vizualita-09.png',
           alt: 'Květinové aranžmá v duchu nové vizuality PEGAS — scéna 9',
         },
+        {
+          src: '/products/kvetiny-vizualita-11.png',
+          alt: 'Smuteční kytice — žluto-bílá s aspidistrou',
+        },
+        {
+          src: '/products/kvetiny-vizualita-10.png',
+          alt: 'Rakvová vazba — pestrá kompozice s gerberami',
+        },
+        {
+          src: '/products/kvetiny-vizualita-12.png',
+          alt: 'Smuteční vazba — menší pestrá kompozice',
+        },
+        {
+          src: '/products/kvetiny-vizualita-13.png',
+          alt: 'Smuteční věnec — pestrá kompozice s gerberami',
+        },
       ] satisfies GalleryItem[],
     },
     takeaway: 'Vazby pro život. Vazby pro loučení.',
@@ -449,20 +465,20 @@ export const caseStudy = {
         caption: 'Cleanup pozadí, sjednocení nasvícení, detail v plné kvalitě.',
       },
       {
-        src: '/products/flow-03-sheet.jpg',
-        alt: 'PEGAS produktový list — JARO 1',
-        label: '03 · Produktový list',
-        caption: 'Layout v PEGAS šabloně. Náhledy + detail + popis + parametry.',
+        src: '/products/flow-product.jpg',
+        alt: 'Celý produkt — věnec na stojanu na čistém studiu',
+        label: '03 · Celý produkt',
+        caption: 'Z detailu do celku: produkt na stojanu v čistém studiu, připravený do listu.',
       },
       {
         src: '/products/flow-04-binder.jpg',
         alt: 'Fialový kroužkový binder s produktovými listy na pobočce',
         label: '04 · Binder na pobočce',
-        caption: 'Sezónní binder do každé pobočky. Aktuální nabídka po ruce.',
+        caption: 'Layout v PEGAS šabloně — náhledy, detail, popis, parametry. Sezónní binder do každé pobočky, aktuální nabídka po ruce.',
       },
     ] satisfies FlowStep[],
     takeaway:
-      'Šetříme klientovi peníze i čas. Dnes vymyslíme produkt, zítra je na pobočkách.',
+      'Dnes vymyslí produkt, zítra je na pobočkách. I sezónní novinky, do kterých se dřív kvůli produkci nepouštěli.',
   },
 
   // 09 — Hlas (prezentace + podcast)
@@ -662,6 +678,10 @@ export const caseStudy = {
     ],
     takeaway:
       'Bez AI bychom středoevropskou vizualitu pohřebnictví nedokázali postavit takhle.',
+    closingBox: {
+      tag: 'Mezi námi',
+      body: 'Tuhle stránku jsme taky stavěli s AI — text, design, kód. Vy ale robot nejste. A přesně proto níž ještě pár momentů, kdy se AI zasekla i nám.',
+    },
     failedGallery: {
       label: 'Když se nedaří',
       intro:

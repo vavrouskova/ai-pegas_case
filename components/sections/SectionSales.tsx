@@ -83,6 +83,17 @@ export const SectionSales = () => {
           </p>
         </div>
 
+        <div className="mt-16 md:mt-20 max-w-2xl">
+          <div className="relative border border-alovy-dark/40 bg-cream p-8 md:p-10">
+            <span className="absolute -top-3 left-6 bg-alovy-soft/40 px-3 py-0.5 text-xs uppercase tracking-[0.2em] text-alovy-dark">
+              {sales.closingBox.tag}
+            </span>
+            <p className="font-serif text-lg md:text-xl leading-snug text-ink">
+              {sales.closingBox.body}
+            </p>
+          </div>
+        </div>
+
         <div className="mt-20 md:mt-28">
           <p className="text-sm uppercase tracking-[0.2em] text-muted mb-4">
             {sales.failedGallery.label}

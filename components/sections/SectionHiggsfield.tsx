@@ -28,7 +28,7 @@ export const SectionHiggsfield = () => {
 
         <div className="mt-16 md:mt-20 grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
           {higgsfield.flow.map((step, index) => {
-            const fillsBox = step.src.includes('flow-02') || step.src.includes('flow-04');
+            const fillsBox = step.src.includes('flow-02') || step.src.includes('flow-04') || step.src.includes('flow-product');
             const isSheet = step.src.includes('flow-03');
             return (
             <figure key={index} className="space-y-3">

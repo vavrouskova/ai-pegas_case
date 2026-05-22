@@ -2,11 +2,10 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "studaiant-case-dev",
+      "name": "next-dev",
       "runtimeExecutable": "bun",
       "runtimeArgs": ["run", "dev"],
-      "port": 3000,
-      "cwd": "/Users/vendy/Desktop/ant-case-AI"
+      "port": 3000
     }
   ]
 }

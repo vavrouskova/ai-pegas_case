@@ -70,7 +70,7 @@ export const SectionFloralCatalog = () => {
           <LightboxGallery
             items={floralCatalog.visualGallery.items}
             gridClassName="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5"
-            figureAspect="aspect-[3/4]"
+            figureAspect="aspect-square"
           />
         </div>
 

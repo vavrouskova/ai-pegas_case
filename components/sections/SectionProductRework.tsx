@@ -46,6 +46,14 @@ export const SectionProductRework = () => {
           </div>
         </div>
 
+        <div className="mt-16 md:mt-20 max-w-3xl">
+          <p className="font-serif text-2xl md:text-3xl leading-tight">
+            <span className="text-alovy">„</span>
+            {productRework.takeaway}
+            <span className="text-alovy">"</span>
+          </p>
+        </div>
+
         <div className="mt-16 md:mt-20 space-y-12 md:space-y-16">
           {productRework.pairs.map((pair, index) => (
             <figure key={index} className="space-y-4">
@@ -108,13 +116,6 @@ export const SectionProductRework = () => {
           </div>
         </div>
 
-        <div className="mt-16 md:mt-20 max-w-3xl">
-          <p className="font-serif text-2xl md:text-3xl leading-tight">
-            <span className="text-alovy">„</span>
-            {productRework.takeaway}
-            <span className="text-alovy">"</span>
-          </p>
-        </div>
       </div>
     </section>
   );
