@@ -14,7 +14,9 @@ export const SectionAssistant = () => {
               10 · Asistent
             </div>
             <h2 className="font-serif text-5xl lg:text-6xl leading-[1.05]">
-              Vymazlenej asistent, <em className="text-alovy not-italic">značkově vychovanej</em>.
+              Vychovaný asistent.
+              <br />
+              <em className="text-alovy not-italic">Krmený značkou</em>.
             </h2>
           </div>
           <div className="md:col-span-7 md:col-start-6 space-y-6">
