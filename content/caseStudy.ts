@@ -404,6 +404,18 @@ export const caseStudy = {
           src: '/products/kvetiny-vizualita-06.png',
           alt: 'Květinové aranžmá v duchu nové vizuality PEGAS — scéna 6',
         },
+        {
+          src: '/products/kvetiny-vizualita-07.png',
+          alt: 'Květinové aranžmá v duchu nové vizuality PEGAS — scéna 7',
+        },
+        {
+          src: '/products/kvetiny-vizualita-08.png',
+          alt: 'Květinové aranžmá v duchu nové vizuality PEGAS — scéna 8',
+        },
+        {
+          src: '/products/kvetiny-vizualita-09.png',
+          alt: 'Květinové aranžmá v duchu nové vizuality PEGAS — scéna 9',
+        },
       ] satisfies GalleryItem[],
     },
     takeaway: 'Vazby pro život. Vazby pro loučení.',
@@ -601,6 +613,12 @@ export const caseStudy = {
       'Co z toho? Všechno tohle umíme — a umíme to prodat dál. Konkrétní balíčky:',
     packages: [
       {
+        title: 'Tvorba obsahu bez focení',
+        description:
+          'Drahé focení bývalo největší brzda obsahu. Dneska děláme scény, detaily i varianty s AI — v hodinách, ne týdnech. U květin obzvlášť: stovky kombinací bez ateliéru.',
+        wide: true,
+      },
+      {
         title: 'AI brand asistent na míru',
         description:
           'Nastavíme ho, krmíme klientovou značkou, dáme tým k denní práci. Pro klienty, kteří chtějí konzistenci napříč týmem.',
@@ -629,11 +647,6 @@ export const caseStudy = {
         title: 'Vibecoding · funkční frontend',
         description:
           'Frontend přímo v kódu, ne ve Figmě. Kalendáře, wizards, editory za dny — s klientem se bavíme rovnou na pohyblivém modelu, ne nad statickým návrhem.',
-      },
-      {
-        title: 'Tvorba obsahu bez focení',
-        description:
-          'Drahé focení bývalo největší brzda obsahu. Dneska děláme scény, detaily i varianty s AI — v hodinách, ne týdnech. U květin obzvlášť: stovky kombinací bez ateliéru.',
       },
     ],
     takeaway:

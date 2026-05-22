@@ -28,14 +28,21 @@ export const SectionSales = () => {
 
         {/* Big package cards */}
         <ul className="grid md:grid-cols-2 gap-6 md:gap-8">
-          {sales.packages.map((pkg, index) => {
-            const isOddLast =
-              sales.packages.length % 2 === 1 && index === sales.packages.length - 1;
-            return (
+          {(() => {
+            const hasExplicitWide = sales.packages.some(
+              (p) => 'wide' in p && p.wide,
+            );
+            return sales.packages.map((pkg, index) => {
+              const wide =
+                ('wide' in pkg && pkg.wide) ||
+                (!hasExplicitWide &&
+                  sales.packages.length % 2 === 1 &&
+                  index === sales.packages.length - 1);
+              return (
             <li
               key={index}
               className={`border border-line p-8 md:p-10 card-hover bg-cream ${
-                isOddLast ? 'md:col-span-2' : ''
+                wide ? 'md:col-span-2' : ''
               }`}
             >
               <div className="flex items-baseline justify-between mb-8 md:mb-10">
@@ -53,8 +60,9 @@ export const SectionSales = () => {
                 {pkg.description}
               </p>
             </li>
-            );
-          })}
+              );
+            });
+          })()}
         </ul>
 
         <div className="mt-20 md:mt-24 max-w-4xl">
