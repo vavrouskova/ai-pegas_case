@@ -692,7 +692,7 @@ export const caseStudy = {
   },
 
   credits: {
-    team: 'Tým antstudia',
+    team: 'Tým: kreativa',
     client: 'Klient: PEGAS',
     stack: ['ChatGPT custom', 'Higgsfield', 'Claude Code', 'Next.js 16', 'Vercel', 'WordPress'],
     copyright: '© 2026 · studAIant case study · antstudio × PEGAS',
