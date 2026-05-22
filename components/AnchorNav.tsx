@@ -1,6 +1,6 @@
 import { caseStudy } from '@/content/caseStudy';
 
-const TOP_BAR_LABEL = 'Case study · PEGAS';
+const TOP_BAR_LABEL = 'PEGAS + AI';
 const TOP_BAR_META = '2025–2026 · antstudio × PEGAS';
 
 export const TopBar = () => {

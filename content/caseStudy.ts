@@ -92,7 +92,7 @@ export const caseStudy = {
   // 01 — Výsledek
   result: {
     intro:
-      'Šest oblastí, ve kterých v kreativě používáme AI jako nástroj na klientských projektech. Tohle umíme dělat — a umíme to prodat dál.',
+      'Sedm oblastí, ve kterých v kreativě používáme AI jako nástroj na klientských projektech. Tohle umíme dělat — a umíme to prodat dál.',
     areas: [
       {
         number: '01',
@@ -129,6 +129,12 @@ export const caseStudy = {
         title: 'Code',
         description:
           'S Claude Code stavíme features — kalendář obřadů, parte editor, vazbykvetin.cz za dny místo týdnů.',
+      },
+      {
+        number: '07',
+        title: 'Tvoření obsahu',
+        description:
+          'Volné ruce, svoboda. Nečekáme na produkci, nečekáme na fotografa — co dnes vymyslíme, dnes nasadíme.',
       },
     ] satisfies ServiceArea[],
   },
