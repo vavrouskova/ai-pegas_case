@@ -6,34 +6,50 @@ export const SectionSales = () => {
   const { sales } = caseStudy;
 
   return (
-    <section id="obchod" className="relative px-6 md:px-12 py-24 md:py-32 border-t border-line">
+    <section
+      id="obchod"
+      className="relative px-6 md:px-12 py-32 md:py-40 border-t border-line bg-alovy-soft/40"
+    >
       <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-12 gap-10">
-          <div className="md:col-span-4">
-            <div className="text-sm uppercase tracking-[0.2em] text-muted mb-4">
-              12 · Pro obchod
-            </div>
-            <h2 className="font-serif text-5xl md:text-6xl leading-[1.05]">
-              Tohle umíme
-              <br />
-              <em className="text-alovy not-italic">prodat dál</em>.
-            </h2>
+        {/* Full-width hero header */}
+        <div className="max-w-4xl mb-16 md:mb-20">
+          <div className="text-sm uppercase tracking-[0.2em] text-muted mb-6">
+            12 · Pro obchod
           </div>
-          <div className="md:col-span-7 md:col-start-6">
-            <p className="text-lg md:text-xl leading-relaxed mb-10">{sales.intro}</p>
-            <ul className="grid sm:grid-cols-2 gap-5">
-              {sales.packages.map((pkg, index) => (
-                <li
-                  key={index}
-                  className="border border-line p-5 space-y-2 card-hover"
-                >
-                  <h3 className="font-serif text-lg">{pkg.title}</h3>
-                  <p className="text-sm text-muted leading-relaxed">{pkg.description}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <h2 className="font-serif text-6xl md:text-7xl lg:text-8xl leading-[1.0] tracking-tight">
+            Tohle umíme
+            <br />
+            <em className="text-alovy not-italic">prodat dál</em>.
+          </h2>
+          <p className="mt-10 md:mt-12 text-xl md:text-2xl leading-relaxed text-muted max-w-3xl">
+            {sales.intro}
+          </p>
         </div>
+
+        {/* Big package cards */}
+        <ul className="grid md:grid-cols-2 gap-6 md:gap-8">
+          {sales.packages.map((pkg, index) => (
+            <li
+              key={index}
+              className="border border-line p-8 md:p-10 card-hover bg-cream"
+            >
+              <div className="flex items-baseline justify-between mb-8 md:mb-10">
+                <span className="font-serif text-5xl md:text-6xl text-alovy leading-none">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <span className="text-xs uppercase tracking-widest text-muted">
+                  Balíček
+                </span>
+              </div>
+              <h3 className="font-serif text-2xl md:text-3xl leading-tight mb-4">
+                {pkg.title}
+              </h3>
+              <p className="text-base md:text-lg text-muted leading-relaxed">
+                {pkg.description}
+              </p>
+            </li>
+          ))}
+        </ul>
 
         <div className="mt-20 md:mt-24 max-w-4xl">
           <div
