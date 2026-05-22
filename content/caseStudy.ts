@@ -69,7 +69,7 @@ export const caseStudy = {
   hero: {
     label: 'studAIant · case study',
     title: 'Brand PEGAS jsme postavili s AI.',
-    subtitle: 'Texty · Ilustrace · Foto · Hlas · Rešerše · Code',
+    subtitle: 'Texty · Ilustrace · Foto · Hlas · Rešerše · Frontend',
     meta: '2025–2026 · antstudio × PEGAS',
     cta: 'Skroluj',
   },
@@ -126,9 +126,9 @@ export const caseStudy = {
       },
       {
         number: '06',
-        title: 'Code',
+        title: 'Frontend',
         description:
-          'S Claude Code stavíme features — kalendář obřadů, parte editor, vazbykvetin.cz za dny místo týdnů.',
+          'Designujeme přímo v kódu. S Claude Code stavíme funkční frontend — kalendář obřadů, parte editor, vazbykvetin.cz za dny místo týdnů.',
       },
       {
         number: '07',
@@ -352,6 +352,14 @@ export const caseStudy = {
           src: '/products/katalog-kvetin-zdroj-04.png',
           alt: 'Strana katalogu Vzorová aranžmá',
         },
+        {
+          src: '/products/katalog-kvetin-zdroj-05.png',
+          alt: 'Obálka katalogu 2015 — kytice z rudých růží',
+        },
+        {
+          src: '/products/katalog-kvetin-zdroj-06.png',
+          alt: 'Skutečná fotografie obřadní síně s portrétem Jana Nováka a bílými věnci — výchozí scéna pro AI rework',
+        },
       ] satisfies GalleryItem[],
     },
     outputGallery: {
@@ -405,10 +413,6 @@ export const caseStudy = {
         {
           src: '/products/kvetiny-vizualita-05.png',
           alt: 'Květinové aranžmá v duchu nové vizuality PEGAS — scéna 5',
-        },
-        {
-          src: '/products/kvetiny-vizualita-06.png',
-          alt: 'Květinové aranžmá v duchu nové vizuality PEGAS — scéna 6',
         },
         {
           src: '/products/kvetiny-vizualita-07.png',
@@ -642,12 +646,12 @@ export const caseStudy = {
       {
         title: 'AI brand asistent na míru',
         description:
-          'Nastavíme ho, krmíme klientovou značkou, dáme tým k denní práci. Pro klienty, kteří chtějí konzistenci napříč týmem.',
+          'Nastavíme ho, krmíme klientovou značkou, předáme týmu k denní práci. Pro klienty, kteří chtějí konzistenci napříč výstupy.',
       },
       {
         title: 'Prezentace, podcasty, panely',
         description:
-          'Brand prezentace s AI voiceoverem, podcast formát, panely a diskuze s více mluvčími. Plán: vlastní avataři antstudia jako stálé tváře — místo nákladných realizací.',
+          'Brand prezentace s AI voiceoverem, podcast formát, panelové diskuze s více mluvčími. Plán: vlastní avataři.',
         tag: 'Zkoumáme',
       },
       {

@@ -63,14 +63,30 @@ export const SectionVoice = () => {
                       className="absolute inset-0 w-full h-full"
                     />
                   ) : item.src ? (
-                    <video
-                      controls
-                      poster={item.poster}
-                      preload="none"
-                      className="absolute inset-0 w-full h-full object-cover"
-                    >
-                      <source src={item.src} type="video/mp4" />
-                    </video>
+                    <>
+                      <video
+                        controls
+                        poster={item.poster}
+                        preload="metadata"
+                        className="absolute inset-0 w-full h-full object-cover bg-ink"
+                      >
+                        <source src={item.src} type="video/mp4" />
+                      </video>
+                      {/* Decorative play icon overlay — visible until user clicks on the video */}
+                      <div className="pointer-events-none absolute inset-0 flex items-center justify-center [&:has(+video[autoplay])]:hidden">
+                        <span className="flex h-16 w-16 md:h-20 md:w-20 items-center justify-center rounded-full bg-cream/90 text-ink shadow-lg">
+                          <svg
+                            width="22"
+                            height="26"
+                            viewBox="0 0 22 26"
+                            fill="currentColor"
+                            aria-hidden
+                          >
+                            <path d="M0 0L22 13L0 26V0Z" />
+                          </svg>
+                        </span>
+                      </div>
+                    </>
                   ) : (
                     <PlayIcon />
                   )}

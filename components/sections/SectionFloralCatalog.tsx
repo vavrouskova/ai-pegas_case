@@ -32,17 +32,17 @@ export const SectionFloralCatalog = () => {
           <p className="text-sm uppercase tracking-[0.2em] text-muted mb-6">
             {floralCatalog.sourceGallery.label}
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
             {floralCatalog.sourceGallery.items.map((item, index) => (
               <figure
                 key={index}
-                className="relative overflow-hidden border border-line bg-cream aspect-[3/4]"
+                className="relative overflow-hidden border border-line bg-cream aspect-square"
               >
                 <Image
                   src={item.src}
                   alt={item.alt}
                   fill
-                  sizes="(max-width: 768px) 50vw, 25vw"
+                  sizes="(max-width: 768px) 50vw, 33vw"
                   className="object-contain"
                 />
               </figure>

@@ -6,7 +6,7 @@
       "runtimeExecutable": "bun",
       "runtimeArgs": ["run", "dev"],
       "port": 3000,
-      "cwd": "/Users/vendy/Desktop/studaiant-case"
+      "cwd": "/Users/vendy/Desktop/ant-case-AI"
     }
   ]
 }
