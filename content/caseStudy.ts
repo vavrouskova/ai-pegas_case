@@ -67,7 +67,7 @@ export interface FlowStep {
 
 export const caseStudy = {
   hero: {
-    label: 'studAIant · case study',
+    label: 'case study',
     title: 'Pohřebnictví (má) v rukou AI.',
     subtitle: 'Texty · Ilustrace · Foto · Hlas · Rešerše · Frontend',
     meta: '2025–2026 · antstudio × PEGAS',
@@ -721,7 +721,7 @@ export const caseStudy = {
     team: 'Tým: kreativa',
     client: 'Klient: PEGAS',
     stack: ['ChatGPT custom', 'Higgsfield', 'Claude Code', 'Next.js 16', 'Vercel', 'WordPress'],
-    copyright: '© 2026 · studAIant case study · antstudio × PEGAS',
+    copyright: '© 2026 · Case study · antstudio × PEGAS',
   },
 };
 

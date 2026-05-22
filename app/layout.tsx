@@ -2,16 +2,13 @@ import './globals.css';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'studAIant · Case study PEGAS',
+  title: 'Case study PEGAS',
   description: 'Pohřebnictví (má) v rukou AI.',
   openGraph: {
-    title: 'studAIant · Case study PEGAS',
+    title: 'Case study PEGAS',
     description: 'Pohřebnictví (má) v rukou AI.',
     type: 'article',
     locale: 'cs_CZ',
-  },
-  icons: {
-    icon: '/favicon.ico',
   },
 };
 
