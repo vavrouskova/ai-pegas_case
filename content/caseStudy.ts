@@ -626,9 +626,14 @@ export const caseStudy = {
           'Mobilní snímky proměníme v produktové fotky. Pro e-shopy s rychlým produktovým cyklem.',
       },
       {
-        title: 'Vibecoding features',
+        title: 'Vibecoding · funkční frontend',
         description:
-          'Kalendáře, wizards, editory — postavené za dny. Pro klienty, kteří potřebují digitální produkt rychle. A hlavně mají značku — potom to funguje skvěle a rychle.',
+          'Frontend přímo v kódu, ne ve Figmě. Kalendáře, wizards, editory za dny — s klientem se bavíme rovnou na pohyblivém modelu, ne nad statickým návrhem.',
+      },
+      {
+        title: 'Tvorba obsahu bez focení',
+        description:
+          'Drahé focení bývalo největší brzda obsahu. Dneska děláme scény, detaily i varianty s AI — v hodinách, ne týdnech. U květin obzvlášť: stovky kombinací bez ateliéru.',
       },
     ],
     takeaway:
