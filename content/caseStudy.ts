@@ -49,6 +49,7 @@ export interface MediaItem {
   description: string;
   src?: string;
   poster?: string;
+  embedUrl?: string;
 }
 
 export interface PrintMaterial {
@@ -79,18 +80,19 @@ export const caseStudy = {
     { id: 'jazyk', label: '03 Vizuální jazyk' },
     { id: 'obraz', label: '04 Krize obrazu' },
     { id: 'produkty', label: '05 Produkty' },
-    { id: 'tym', label: '06 Tým' },
+    { id: 'katalog-kvetin', label: '06 Katalog květin' },
     { id: 'higgsfield', label: '07 Higgsfield' },
-    { id: 'hlas', label: '08 Hlas' },
-    { id: 'asistent', label: '09 Asistent' },
-    { id: 'vibecoding', label: '10 Vibecoding' },
-    { id: 'obchod', label: '11 Pro obchod' },
+    { id: 'tym', label: '08 Tým' },
+    { id: 'hlas', label: '09 Hlas' },
+    { id: 'asistent', label: '10 Asistent' },
+    { id: 'vibecoding', label: '11 Vibecoding' },
+    { id: 'obchod', label: '12 Pro obchod' },
   ],
 
   // 01 — Výsledek
   result: {
     intro:
-      'Šest oblastí, ve kterých v antu používáme AI jako nástroj na klientských projektech. Tohle umíme dělat — a umíme to prodat dál.',
+      'Šest oblastí, ve kterých v kreativě používáme AI jako nástroj na klientských projektech. Tohle umíme dělat — a umíme to prodat dál.',
     areas: [
       {
         number: '01',
@@ -126,7 +128,7 @@ export const caseStudy = {
         number: '06',
         title: 'Code',
         description:
-          'S Claude Code stavíme features — kalendář obřadů, parte editor, wizard pro objednání květin za dny místo týdnů.',
+          'S Claude Code stavíme features — kalendář obřadů, parte editor, vazbykvetin.cz za dny místo týdnů.',
       },
     ] satisfies ServiceArea[],
   },
@@ -134,7 +136,7 @@ export const caseStudy = {
   // 02 — Rešerše
   research: {
     intro:
-      'Než jsme cokoliv navrhli, museli jsme téma pohřebnictví pochopit. S AI jsme zorientování v cizí krajině zkrátili na zlomek času.',
+      'Než jsme cokoliv navrhli, museli jsme téma pohřebnictví pochopit. S AI jsme se v cizí krajině zorientovali za zlomek času.',
     points: [
       'Konkurenční analýza českého trhu — co kdo nabízí, co chybí, kde je prostor.',
       'Zahraniční benchmarks — Skandinávie (designově otevřenější), UK (citlivost komunikace), US (digitální nabídka).',
@@ -142,7 +144,7 @@ export const caseStudy = {
     ],
   },
 
-  // 03 — Krize obrazu
+  // 04 — Krize obrazu
   imageCrisis: {
     stockGallery: [
       { src: '/illustrations/stock-01.jpg', alt: 'Stockový americký pohřeb' },
@@ -175,7 +177,7 @@ export const caseStudy = {
   // 03 — Vizuální jazyk PEGAS
   visualLanguage: {
     intro:
-      "S asistentem jsme značce PEGAS postavili vlastní vizuální jazyk. Nezaměnitelný, čitelný, signifikantní. Křídlo místo celého koně. Příroda místo symbolů oboru. Otevřený motiv napříč věkem, vírou i kontextem.",
+      "S asistentem jsme značce PEGAS postavili vlastní vizuální jazyk. Nezaměnitelný, čitelný, výrazný. Křídlo místo celého koně. Příroda místo symbolů oboru. Otevřený motiv napříč věkem, vírou i kontextem.",
     wing: {
       src: '/assistant/vize-kridlo.png',
       alt: 'Křídlo — tichý symbol přítomnosti',
@@ -193,7 +195,28 @@ export const caseStudy = {
   // 05 — Produkty (čistíme nekvalitní podklady od dodavatelů)
   productRework: {
     intro:
-      'Produktové materiály od dodavatelů jsou často nepoužitelné — modré gradienty, dílenské pozadí, špatné nasvícení, snímek na vozíku před garáží. Z toho, co dorazí, uděláme čisté studiové fotky pro produktový list. Začínáme rakvemi — tam, kde se nekvalita podkladů od dodavatelů ukazuje nejvýrazněji.',
+      'Produktové materiály od dodavatelů jsou často nepoužitelné — modré gradienty, dílenské pozadí, špatné nasvícení, snímek na vozíku před garáží. Z toho, co dorazí, uděláme čisté studiové fotky pro produktový list. Začínáme rakvemi — tam, kde se ta nekvalita ukazuje nejvýrazněji.',
+    sourceGallery: {
+      label: 'Zdroje',
+      items: [
+        {
+          src: '/products/dodavatele-01.png',
+          alt: 'Katalogový snímek rakve od dodavatele — tmavé pozadí, ostré odlesky',
+        },
+        {
+          src: '/products/dodavatele-02.png',
+          alt: 'Katalogový snímek rakve od dodavatele — modrý gradient, rušivé prvky',
+        },
+        {
+          src: '/products/dodavatele-03.png',
+          alt: 'Katalogový snímek rakve od dodavatele — text v záběru, plochá kompozice',
+        },
+        {
+          src: '/products/dodavatele-04.png',
+          alt: 'Katalogový snímek rakve od dodavatele — modrý gradient, bílý rámeček',
+        },
+      ] satisfies GalleryItem[],
+    },
     pairs: [
       {
         before: {
@@ -230,26 +253,16 @@ export const caseStudy = {
           src: '/products/rakev-02-pohledy.png',
           alt: 'Tmavší ořechová rakev s bílým saténovým interiérem — celkový pohled s otevřeným víkem, detail interiéru s polštářem, detail mosazného madla na nosné tyči, celkový boční profil',
         },
-        {
-          src: '/products/rakev-04-pohledy.png',
-          alt: 'Medová dřevěná rakev se šeříkovým saténovým interiérem — celkový pohled s otevřeným víkem, detail interiéru se zřaseným saténem, detail mosazného madla, celkový boční profil zavřené rakve',
-        },
       ] satisfies GalleryItem[],
     },
-    catalog: {
-      src: '/products/rakev-katalog.png',
-      alt: 'Katalog rakví PEGAS — desítky vyčištěných produktovek sjednocených do jedné vizuální linie',
-    } satisfies GalleryItem,
-    catalogCaption:
-      'Výsledek: desítky rakví v jedné vizuální linii. Sjednocené pozadí, světlo, kompozice. Bez focení.',
     takeaway:
-      'Dodavatel pošle, co má. Vrátíme produktovku, která vypadá jako z katalogu.',
+      'Téma samo o sobě bolí. Nemusíme dostávat šíp do oka u každé další rakve.',
   },
 
-  // 06 — Tým (portréty zaměstnanců — komplikované focení, AI cleanup)
+  // 08 — Tým (portréty zaměstnanců — komplikované focení, AI cleanup)
   teamPortraits: {
     intro:
-      'Týmové focení v pohřebnictví drhne dvakrát — produkčně a náladou. Studio a fotograf na pobočku jen kvůli portrétům jsou drahá produkce. A i když je seženete, lidi se stydí, nechtějí být na webu. S AI postavíme portrét z fotky, kterou už máme — z mobilu na chodbě, ze záběru z akce. Probíhalo společné ladění, každý člověk dostal několik variant na výběr a sám si vybral tu, ve které se vidí. Tak vznikl celý tým na webu. A některé portréty si zaměstnanci dokonce nasadili jako profilovku na osobních sítích.',
+      'Týmové focení v pohřebnictví drhne dvakrát — produkčně a náladou. Studio a fotograf na pobočku jen kvůli portrétům jsou drahá produkce. A i když je seženete, lidi se stydí, nechtějí být na webu. S AI postavíme portrét z fotky, kterou už máme — z mobilu na chodbě, ze záběru z akce. Ladili jsme to společně — každý dostal několik variant a vybral si tu, ve které se vidí. Tak vznikl celý tým na webu. A některé portréty si zaměstnanci dokonce nasadili jako profilovku na osobních sítích.',
     pairs: [
       {
         before: {
@@ -310,10 +323,96 @@ export const caseStudy = {
       'Lidi, co nechtěli na fotku, jsou teď na webu. Protože se na výsledku poprvé líbí sami sobě.',
   },
 
+  // 06 — Katalog smutečních vazeb (před/po z PDF katalogu 2015)
+  floralCatalog: {
+    intro:
+      'Smuteční vazby v dosavadním katalogu PEGAS žily v podobě tištěných stran z roku 2015 — drobné fotky, sjednocené jen tím, že jsou všechny smutné. Z původních podkladů (PDF z roku 2015) postavíme aktuální produktové fotky, scény do síně i kompletní katalogové layouty. Obsah dotáhneme společně s klientem.',
+    sourceGallery: {
+      label: 'Zdroje · Katalog smuteční vazby 2015',
+      items: [
+        {
+          src: '/products/katalog-kvetin-zdroj-01.png',
+          alt: 'Strana katalogu Kytice na rakev — typografické zpracování z roku 2015',
+        },
+        {
+          src: '/products/katalog-kvetin-zdroj-02.png',
+          alt: 'Strana katalogu Kytice na rakev — varianty s karafiáty a chryzantémami',
+        },
+        {
+          src: '/products/katalog-kvetin-zdroj-03.png',
+          alt: 'Strana katalogu Věnce a vzpomínkové kytičky',
+        },
+        {
+          src: '/products/katalog-kvetin-zdroj-04.png',
+          alt: 'Strana katalogu Vzorová aranžmá',
+        },
+      ] satisfies GalleryItem[],
+    },
+    outputGallery: {
+      label: 'Výstupy · AI dotažený katalog',
+      intro:
+        'Z původního zdroje (skutečná scéna z obřadní síně) rozebereme aranžmá na komponenty, znovu je zasadíme do nové scény a dotáhneme až k detailu solo produktu. Stejné květiny, jiná řeč značky.',
+      items: [
+        {
+          src: '/products/katalog-kvetin-vystup-04.png',
+          alt: 'Scéna obřadní síně s portrétem Jana Nováka a věnci kolem rakve',
+          label: '01 · Zdroj',
+        },
+        {
+          src: '/products/katalog-kvetin-vystup-03.png',
+          alt: 'Katalogový grid produktovek — devět smutečních vazeb + stojanový snímek s portrétem',
+          label: '02 · Komponenty',
+        },
+        {
+          src: '/products/katalog-kvetin-vystup-02.png',
+          alt: 'Scéna obřadní síně s rakví, svícemi a květinovými aranžmá',
+          label: '03 · Nová scéna',
+        },
+        {
+          src: '/products/katalog-kvetin-vystup-01.png',
+          alt: 'Čistá produktovka pohřební kytice na neutrálním pozadí',
+          label: '04 · Detail produktu',
+        },
+      ] satisfies (GalleryItem & { label: string })[],
+    },
+    visualGallery: {
+      label: 'Nová vizualita · květinová řeč značky',
+      intro:
+        'Co z toho vyšlo: konzistentní květinové scény v duchu PEGAS. Tlumené světlo, čistá kompozice, prostor pro důstojnost.',
+      items: [
+        {
+          src: '/products/kvetiny-vizualita-01.png',
+          alt: 'Květinové aranžmá v duchu nové vizuality PEGAS — scéna 1',
+        },
+        {
+          src: '/products/kvetiny-vizualita-02.png',
+          alt: 'Květinové aranžmá v duchu nové vizuality PEGAS — scéna 2',
+        },
+        {
+          src: '/products/kvetiny-vizualita-03.png',
+          alt: 'Květinové aranžmá v duchu nové vizuality PEGAS — scéna 3',
+        },
+        {
+          src: '/products/kvetiny-vizualita-04.png',
+          alt: 'Květinové aranžmá v duchu nové vizuality PEGAS — scéna 4',
+        },
+        {
+          src: '/products/kvetiny-vizualita-05.png',
+          alt: 'Květinové aranžmá v duchu nové vizuality PEGAS — scéna 5',
+        },
+        {
+          src: '/products/kvetiny-vizualita-06.png',
+          alt: 'Květinové aranžmá v duchu nové vizuality PEGAS — scéna 6',
+        },
+      ] satisfies GalleryItem[],
+    },
+    takeaway: 'Vazby pro život. Vazby pro loučení.',
+  },
+
   // 07 — Higgsfield (mobile → studio → list → binder pipeline)
   higgsfield: {
     intro:
-      'Naše vlajková ukázka pro klienta PEGAS — a kterou umíme nabídnout dalším klientům. Z mobilního snímku za pobočkou do binderu s aktuální sezónou. Hodiny místo dnů, bez focení a bez retušérů.',
+      'Z mobilního snímku za pobočkou do binderu s aktuální sezónou. Hodiny místo dnů, bez focení a bez retušérů.',
     flow: [
       {
         src: '/products/flow-01-mobile.jpg',
@@ -341,13 +440,13 @@ export const caseStudy = {
       },
     ] satisfies FlowStep[],
     takeaway:
-      'Klient přijde s katalogem ve smíšené kvalitě. Za týden má všechno v jedné vizuální linii.',
+      'Šetříme klientovi peníze i čas. Dnes vymyslíme produkt, zítra je na pobočkách.',
   },
 
-  // 06 — Hlas (prezentace + podcast)
+  // 09 — Hlas (prezentace + podcast)
   voice: {
     intro:
-      'Vyrobili jsme 30minutovou prezentaci značky PEGAS s AI voiceoverem. Klienti si ji teď přehrávají sami — nemusíme pořád dokola vysvětlovat základy a máme obsah pod kontrolou. K tomu pilotní ukázka brand podcastu.',
+      'Vyrobili jsme 30minutovou prezentaci značky PEGAS s AI voiceoverem. Klienti si ji teď přehrávají sami — nemusíme pořád dokola vysvětlovat základy a máme obsah pod kontrolou. K tomu pilotní ukázka brand podcastu. Obojí jsou zatím pracovní verze — mají chyby, nejsou doladěné. Ukazujeme formát, ne finální podobu.',
     // src/poster nechány nevyplněné — vendy doplní reálné soubory do public/media/
     items: [
       {
@@ -355,38 +454,27 @@ export const caseStudy = {
         title: 'Prezentace značky PEGAS',
         duration: '30 min',
         description:
-          'Kompletní intro do brandu — manifest, vizuální systém, claim. AI voiceover a generované pasáže obrazu, my dramaturgie a střih. Klient si pustí a my nemluvíme do prázdna.',
-      },
-      {
-        kind: 'video',
-        title: 'Interní prezentace pro firmu',
-        duration: '~ 15 min',
-        description:
-          'Direkce do PEGAS týmu: kam jdeme, proč to děláme, jak to měříme. AI voiceover držený v tónu značky.',
+          'Lepší než záznam, ve kterém drčíme a uhýbáme k jiným tématům. Klidná prezentace v drženém tónu — manifest, vizuální systém, claim. AI voiceover a generované pasáže obrazu, my dramaturgie a střih.',
+        src: '/media/PEGAS-BRAND_03.mp4',
       },
       {
         kind: 'audio',
         title: 'Pilotní brand podcast',
         duration: '~ 5 min',
         description:
-          'Ukázka, jak by mohl vypadat dlouhodobý audio kanál PEGAS. Hlas, hudbu a tonalitu jsme vygenerovali AI nástroji, scénář držíme my.',
+          'Ukázka, jak by mohl vypadat dlouhodobý audio kanál PEGAS. Tady ještě bez hudby — test, jak to jde. Hlas a tonalitu jsme vygenerovali AI nástroji, scénář držíme my.',
+        src: '/media/PEGAS_rozhovor-rebranding.mp3',
       },
     ] satisfies MediaItem[],
     takeaway:
-      'Klient si materiály pustí. Tým antu nemusí každému kreslit značku od nuly znovu. Obsah pod kontrolou, čas zpátky.',
+      'Nemluvíme dokola, mluví materiály.',
   },
 
-  // 07 — Brand asistent
+  // 10 — Brand asistent
   assistant: {
     intro:
-      'Postavili jsme custom ChatGPT asistenta hned na začátku vývoje brandu PEGAS. Krmíme ho brand systémem, manifestem, claim systémem. Postupně jsme ho doladili na značku — i přes její náročný minimalismus.',
-    capabilities: [
-      'Píšeme s ním brand copy a web texty v drženém tónu.',
-      'Brainstormujeme s ním postupy a nápady k projektům.',
-      'Generujeme s ním první ilustrace (vstup do sekce 03).',
-      'Stavíme s ním vizuální esenci značky — symboly, jazyk, otevřené motivy bez klišé oboru.',
-      'Není to senior nástroj. Trefuje se ale dobře — a šetří nám každodenní rutinu.',
-    ],
+      'Postavili jsme custom ChatGPT asistenta hned na začátku vývoje brandu PEGAS. Krmíme ho a staráme se o něho — brand systémem, informacemi z webu i ukázkami nových aplikací. Postupně jsme ho doladili na značku, i přes její náročný minimalismus.',
+    capabilities: [],
     conversations: [
       {
         tag: 'Tón značky · 3 ano/ne',
@@ -414,7 +502,7 @@ export const caseStudy = {
       {
         tag: 'Delší text · klientka',
         prompt:
-          'Napiš mi článek o tom jak jsem si zařídíla rozloučení předem – jsem klientka PEGAS, nechci zatěžovat rodinu a chci si to naplánovat po svém, mám speciální požadavky a celé to otvírá téma pro širší veřejnost.',
+          'Napiš mi článek o tom, jak jsem si zařídila rozloučení předem — jsem klientka PEGAS, nechci zatěžovat rodinu a chci si to naplánovat po svém. Mám specifické požadavky a celé to otevírá téma pro širší veřejnost.',
         responseTitle: 'Zařídila jsem si rozloučení předem. Ne ze strachu, ale z klidu.',
         responseBody: [
           'Dlouho jsem si myslela, že o vlastním rozloučení se nemluví. Že je to téma, které má přijít až někdy později. A možná ani tehdy ne nahlas. Jenže postupně jsem pochopila, že právě mlčení kolem odchodu může být pro rodinu těžší než samotný rozhovor. Nechtěla jsem, aby jednou moji blízcí museli v nejcitlivější chvíli hádat, co bych si přála. Nechtěla jsem, aby rozhodovali pod tlakem, mezi telefonáty, dokumenty a smutkem. Chtěla jsem jim nechat něco jiného než starost. Klid.',
@@ -448,11 +536,13 @@ export const caseStudy = {
     },
     brandVoice: [
       {
+        tag: 'Esence značky',
         title: 'Co je cílem každé aplikace značky PEGAS?',
         body: 'Cílem každé aplikace značky PEGAS je měnit pohled na rozloučení. Ne silou. Ne provokací. Ale klidem, krásou a přítomností. Smrt bývá téma, které odsouváme — dokud se nás samo nedotkne. PEGAS pro něj vytváří prostor: bez tlaku, bez hotových odpovědí, s úctou k tomu, že každý prožívá ztrátu jinak.',
         attribution: '„Čím více jsme zapojeni do smrti, tím zdravěji truchlíme." — Caitlin Doughty',
       },
       {
+        tag: 'Identita značky',
         title: 'Kdo je tedy PEGAS?',
         body: 'PEGAS není učitelka, která ví, co je správně. PEGAS je osoba, která se posadí vedle vás. Vyslechne. Ztiší prostor. A pomůže najít podobu, která dává smysl vám. Neopravuje, nekárá, nepoučuje. Spíš se ptá: „Co bylo pro něj důležité?" „Co by vám pomohlo?"',
         attribution: 'Nejsme ti, kdo mají pravdu. Jsme ti, kdo pomáhají najít klidný tvar tomu, co cítíte.',
@@ -460,25 +550,25 @@ export const caseStudy = {
     ],
   },
 
-  // 08 — Vibecoding
+  // 11 — Vibecoding
   vibecoding: {
     intro:
-      'Druhá kapitola: s AI nepíšeme jen texty, píšeme i kód. S Claude Code workflow jsme postavili features, které by tradičně trvaly týdny.',
+      'Postavili jsme features, které by tradičně trvaly týdny. S klientem se bavíme rovnou na funkčním prototypu a ladíme na pohyblivém modelu — nahrazujeme tím Figmu a urychlujeme práci dál.',
     features: [
       {
         title: 'Kalendář obřadů',
         description:
-          'List + grid view, filtry podle pobočky a typu, sort, neveřejná rozloučení, smooth scroll. Tři dny od první myšlenky po produkci.',
+          'Digitální vývěska rozloučení — místo, kam lidé přicházejí pro informace o obřadech. Detail, sdílení, kondolence, uložení do kalendáře, objednání květiny. Centralizace informací, sběr kontaktů pro výročí.',
       },
       {
-        title: 'Parte editor',
+        title: 'Parte designér',
         description:
-          'Wizard se šablonami, výběrem gendera, veršem, fotkou. Pozůstalý vyplní za minuty.',
+          'Stavíme na charakteru toho, s kým se loučíme. E-parte se šablonami, Parte designér s průvodcem.',
       },
       {
-        title: 'Wizard pro objednání květiny',
+        title: 'Vazby květin',
         description:
-          'Od kategorií přes formulář po rekapitulaci. Integrace s Vazárna e-shopem.',
+          'Vlastní značka pro květinovou linku PEGASU — od loga po objednávkový tok. E-shop s katalogem, scénami v síni a stuhou na míru.',
       },
     ],
     screenshots: [
@@ -497,16 +587,58 @@ export const caseStudy = {
       {
         src: '/screenshots/wizard.png',
         alt: 'Wizard pro objednání květiny',
-        liveUrl: 'https://vazbyant2026.vercel.app',
-        liveLabel: 'Otevřít wizard naživo',
+        liveUrl: 'https://vazbykvetin.cz',
+        liveLabel: 'Otevřít vazbykvetin.cz naživo',
       },
     ] satisfies (GalleryItem & { liveUrl?: string; liveLabel?: string })[],
+    spotlight: {
+      label: 'Spotlight · vazbykvetin.cz',
+      title: 'Funkční rebranding + e-shop',
+      titleAccent: 'po večerech.',
+      lead: 'Náš první reálný kontakt s vibecodingem. Žádný brief od klienta, žádný wireframe — designéři si šli hrát a místo landing page skočili rovnou do klientského projektu.',
+      phases: [
+        {
+          number: '01',
+          tag: 'Strategie & zadání',
+          title: 'Brief jsme si udělali sami. S AI.',
+          body: 'AI brainstorming → kompletní brief webu: positioning („citlivá, lidská, klidná, důstojná, řemeslná" — ne kýčovitá, ne romantická), tone of voice, UX principy, mikrocopy, informační architektura, emoční linka.',
+          footer: '12bodový dokument → základ pro všechno ostatní.',
+        },
+        {
+          number: '02',
+          tag: 'Brand systém',
+          title: 'Sesterský subbrand na Pegasu.',
+          body: 'Logo vazárny jsme z černobílého mamuta překreslili do alového v duchu Pegase. Manifest staví na konceptu Mamut = paměť, to co zůstává — metafora vazeb, které nekončí.',
+          footer: 'Claim: „Vazby pro život. Vazby pro loučení."',
+        },
+        {
+          number: '03',
+          tag: 'Technická realizace',
+          title: 'Claude Code → GitHub → Vercel.',
+          body: 'Claude Chat dostal zadání a assety, vypadl 7krokový guide + MD specifikace (CLAUDE.md, VAZBYKVETIN_SPEC.md). Když to mělo tah, přihodili jsme UI knihovnu a dojeli to do funkčního e-shopu včetně košíku.',
+          footer: 'Stack: Claude Code · GitHub · Vercel.',
+        },
+      ],
+      stats: {
+        traditionalLabel: 'Klasicky: rebrand + klikací prototyp ve Figmě',
+        traditional: '200 h',
+        timeframeLabel: 'a',
+        timeframe: '3 měsíce',
+        actualLead: 'Postavili jsme koncept subbrandu a deployli funkční prototyp s obsahem v responsivu. Za',
+        actual: '30 h',
+        actualSuffix: '20–30 hodin po večerech.',
+      },
+      takeaway:
+        'Klient má produkt o půl roku dřív → o půl roku dřív začne prodávat.',
+    },
+    takeaway:
+      'Místo statického návrhu posíláme klientovi funkční prototyp. Iterujeme rychle, doručujeme dřív.',
   },
 
-  // 07 — Pointa pro obchod
+  // 12 — Pointa pro obchod
   sales: {
     intro:
-      'Co z toho? Tohle všechno umíme dělat. Tohle všechno umíme prodat klientům. Konkrétní balíčky:',
+      'Co z toho? Všechno tohle umíme — a umíme to prodat dál. Konkrétní balíčky:',
     packages: [
       {
         title: 'AI brand asistent na míru',
@@ -526,11 +658,49 @@ export const caseStudy = {
       {
         title: 'Vibecoding features',
         description:
-          'Kalendáře, wizards, editory — postavené za dny. Pro klienty, kteří potřebují digitální produkt rychle.',
+          'Kalendáře, wizards, editory — postavené za dny. Pro klienty, kteří potřebují digitální produkt rychle. A hlavně mají značku — potom to funguje skvěle a rychle.',
       },
     ],
     takeaway:
-      'Bez AI bychom středoevropskou vizualitu pohřebnictví nedokázali postavit. S AI je antstudio připravené posunout tu hranici i u dalších klientů.',
+      'Bez AI bychom středoevropskou vizualitu pohřebnictví nedokázali postavit takhle.',
+    failedGallery: {
+      label: 'Když se nedaří',
+      intro:
+        'Ne vždycky to sedne. Někdy se s AI nepochopíme. Někdy je to čistá zábava — i v oboru, který stojí na rakvích a věncích.',
+      items: [
+        {
+          src: '/illustrations/ai-fail-01.png',
+          alt: 'AI pokus mimo brief — králíčci na větvi s vrbovými kočičkami a fialovým křídlem',
+        },
+        {
+          src: '/illustrations/ai-fail-02.png',
+          alt: 'AI pokus mimo brief — fialoví plyšoví králíčci',
+        },
+        {
+          src: '/illustrations/ai-fail-03.png',
+          alt: 'AI pokus mimo brief — kočky na větvi a fialová velikonoční vejce',
+        },
+        {
+          src: '/illustrations/ai-fail-04.png',
+          alt: 'AI pokus mimo brief — koťata kolem fialových vajec ve scéně s větvemi',
+        },
+      ] satisfies GalleryItem[],
+    },
+    epilogue: {
+      label: 'P.S.',
+      intro:
+        'AI je nástroj. Občas s vlastní hlavou. Tady dva pokusy o květinu, která má stát na všech nohou stojanu.',
+      items: [
+        {
+          src: '/illustrations/ai-joke-01.png',
+          alt: 'Dialog s AI — žádost o opravu, kytice stále bez správného stojanu',
+        },
+        {
+          src: '/illustrations/ai-joke-02.png',
+          alt: 'Dialog s AI — slunečnice na stojanu, AI tvrdí, že je teď pevně na zemi',
+        },
+      ] satisfies GalleryItem[],
+    },
   },
 
   credits: {

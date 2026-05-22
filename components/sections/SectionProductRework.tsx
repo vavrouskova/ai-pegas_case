@@ -24,6 +24,28 @@ export const SectionProductRework = () => {
           </div>
         </div>
 
+        <div className="mt-16 md:mt-20">
+          <p className="text-sm uppercase tracking-[0.2em] text-muted mb-6">
+            {productRework.sourceGallery.label}
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5">
+            {productRework.sourceGallery.items.map((item, index) => (
+              <figure
+                key={index}
+                className="relative overflow-hidden border border-line bg-cream aspect-[4/3]"
+              >
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-contain"
+                />
+              </figure>
+            ))}
+          </div>
+        </div>
+
         <div className="mt-16 md:mt-20 space-y-12 md:space-y-16">
           {productRework.pairs.map((pair, index) => (
             <figure key={index} className="space-y-4">
@@ -68,7 +90,7 @@ export const SectionProductRework = () => {
           <p className="text-lg md:text-xl leading-relaxed max-w-3xl">
             {productRework.views.intro}
           </p>
-          <div className="mt-10 md:mt-12 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+          <div className="mt-10 md:mt-12 space-y-4 md:space-y-5">
             {productRework.views.items.map((item, index) => (
               <figure
                 key={index}
@@ -78,28 +100,13 @@ export const SectionProductRework = () => {
                   src={item.src}
                   alt={item.alt}
                   fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  sizes="(max-width: 1024px) 100vw, 1152px"
                   className="object-cover"
                 />
               </figure>
             ))}
           </div>
         </div>
-
-        <figure className="mt-16 md:mt-24 space-y-3">
-          <div className="relative overflow-hidden border border-line bg-cream aspect-[3/2]">
-            <Image
-              src={productRework.catalog.src}
-              alt={productRework.catalog.alt}
-              fill
-              sizes="(max-width: 1024px) 100vw, 1152px"
-              className="object-cover"
-            />
-          </div>
-          <figcaption className="text-sm md:text-base text-muted leading-relaxed max-w-3xl">
-            {productRework.catalogCaption}
-          </figcaption>
-        </figure>
 
         <div className="mt-16 md:mt-20 max-w-3xl">
           <p className="font-serif text-2xl md:text-3xl leading-tight">

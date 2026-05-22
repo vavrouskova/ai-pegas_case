@@ -26,16 +26,19 @@ export const SectionHiggsfield = () => {
           </div>
         </div>
 
-        <div className="mt-16 md:mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-5">
-          {higgsfield.flow.map((step, index) => (
+        <div className="mt-16 md:mt-20 grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
+          {higgsfield.flow.map((step, index) => {
+            const fillsBox = step.src.includes('flow-02') || step.src.includes('flow-04');
+            const isSheet = step.src.includes('flow-03');
+            return (
             <figure key={index} className="space-y-3">
-              <div className="relative aspect-[3/4] overflow-hidden border border-line bg-cream">
+              <div className={`relative aspect-[4/3] overflow-hidden border border-line ${isSheet ? 'bg-line' : 'bg-cream'}`}>
                 <Image
                   src={step.src}
                   alt={step.alt}
                   fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                  className={fillsBox ? 'object-cover' : 'object-contain'}
                 />
               </div>
               <figcaption className="space-y-1">
@@ -45,7 +48,8 @@ export const SectionHiggsfield = () => {
                 <p className="text-sm text-muted leading-relaxed">{step.caption}</p>
               </figcaption>
             </figure>
-          ))}
+            );
+          })}
         </div>
 
         <div className="mt-16 md:mt-20 max-w-3xl">

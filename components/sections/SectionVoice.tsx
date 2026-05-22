@@ -33,12 +33,12 @@ export const SectionVoice = () => {
         <div className="grid md:grid-cols-12 gap-10">
           <div className="md:col-span-4">
             <div className="text-sm uppercase tracking-[0.2em] text-muted mb-4">
-              08 · Hlas
+              09 · Hlas
             </div>
             <h2 className="font-serif text-5xl md:text-6xl leading-[1.05]">
-              Nemluvíme dokola,
+              V tichu jsme,
               <br />
-              <em className="text-alovy not-italic">mluví materiály</em>.
+              <em className="text-alovy not-italic">dál už za nás mluví AI</em>.
             </h2>
           </div>
           <div className="md:col-span-7 md:col-start-6">
@@ -54,7 +54,15 @@ export const SectionVoice = () => {
             >
               {item.kind === 'video' ? (
                 <div className="relative aspect-video bg-ink overflow-hidden flex items-center justify-center text-alovy">
-                  {item.src ? (
+                  {item.embedUrl ? (
+                    <iframe
+                      src={item.embedUrl}
+                      title={item.title}
+                      allow="autoplay; encrypted-media; fullscreen"
+                      allowFullScreen
+                      className="absolute inset-0 w-full h-full"
+                    />
+                  ) : item.src ? (
                     <video
                       controls
                       poster={item.poster}
@@ -68,7 +76,7 @@ export const SectionVoice = () => {
                   )}
                 </div>
               ) : (
-                <div className="relative bg-ink overflow-hidden flex items-center justify-center px-8 py-10 text-alovy">
+                <div className="relative aspect-video bg-ink overflow-hidden flex items-center justify-center text-alovy">
                   <AudioBars />
                 </div>
               )}
@@ -92,13 +100,6 @@ export const SectionVoice = () => {
           ))}
         </div>
 
-        <div className="mt-16 md:mt-20 max-w-3xl">
-          <p className="font-serif text-2xl md:text-3xl leading-tight">
-            <span className="text-alovy">„</span>
-            {voice.takeaway}
-            <span className="text-alovy">"</span>
-          </p>
-        </div>
       </div>
     </section>
   );

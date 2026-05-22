@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import { caseStudy } from '@/content/caseStudy';
 
 export const SectionSales = () => {
@@ -9,7 +11,7 @@ export const SectionSales = () => {
         <div className="grid md:grid-cols-12 gap-10">
           <div className="md:col-span-4">
             <div className="text-sm uppercase tracking-[0.2em] text-muted mb-4">
-              11 · Pro obchod
+              12 · Pro obchod
             </div>
             <h2 className="font-serif text-5xl md:text-6xl leading-[1.05]">
               Tohle umíme
@@ -34,11 +36,59 @@ export const SectionSales = () => {
         </div>
 
         <div className="mt-20 md:mt-24 max-w-4xl">
-          <p className="font-serif text-3xl md:text-4xl leading-tight">
-            <span className="text-alovy">„</span>
+          <div
+            aria-hidden
+            className="font-serif text-alovy text-[8rem] md:text-[10rem] leading-[0.6] mb-0 select-none"
+          >
+            &ldquo;
+          </div>
+          <p className="font-serif text-3xl md:text-5xl leading-[1.15] text-ink -mt-4">
             {sales.takeaway}
-            <span className="text-alovy">"</span>
           </p>
+        </div>
+
+        <div className="mt-20 md:mt-28">
+          <p className="text-sm uppercase tracking-[0.2em] text-muted mb-4">
+            {sales.failedGallery.label}
+          </p>
+          <p className="text-base md:text-lg leading-relaxed text-muted max-w-3xl mb-8">
+            {sales.failedGallery.intro}
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5">
+            {sales.failedGallery.items.map((item, index) => (
+              <figure
+                key={index}
+                className="relative overflow-hidden border border-line bg-cream aspect-square"
+              >
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-cover"
+                />
+              </figure>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-20 md:mt-28">
+          <p className="text-sm uppercase tracking-[0.2em] text-alovy-dark mb-6">
+            {sales.epilogue.label}
+          </p>
+          <div className="max-w-xl border border-line overflow-hidden bg-ink">
+            {sales.epilogue.items.map((item, index) => (
+              <figure key={index} className="relative aspect-square">
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 384px"
+                  className="object-contain"
+                />
+              </figure>
+            ))}
+          </div>
         </div>
       </div>
     </section>

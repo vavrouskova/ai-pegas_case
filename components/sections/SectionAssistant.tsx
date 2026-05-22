@@ -11,20 +11,10 @@ export const SectionAssistant = () => {
         <div className="grid md:grid-cols-12 gap-10">
           <div className="md:col-span-4">
             <div className="text-sm uppercase tracking-[0.2em] text-muted mb-4">
-              09 · Asistent
-            </div>
-            <div className="relative w-full max-w-[280px] aspect-[5/2] mb-6">
-              <Image
-                src={assistant.live.logo}
-                alt="Logo PEGAS"
-                fill
-                sizes="280px"
-                className="object-contain object-left"
-                priority
-              />
+              10 · Asistent
             </div>
             <h2 className="font-serif text-5xl md:text-6xl leading-[1.05]">
-              kterého <em className="text-alovy not-italic">jsme naučili</em> značku.
+              Vymazlenej asistent, <em className="text-alovy not-italic">značkově vychovanej</em>.
             </h2>
           </div>
           <div className="md:col-span-7 md:col-start-6 space-y-6">
@@ -45,12 +35,7 @@ export const SectionAssistant = () => {
           <p className="text-sm uppercase tracking-[0.2em] text-muted mb-6">
             Živý asistent · spuštěný na chatgpt.com
           </p>
-          <a
-            href={assistant.live.url}
-            target="_blank"
-            rel="noreferrer"
-            className="block border border-line p-6 md:p-8 card-hover"
-          >
+          <div className="border border-line p-6 md:p-8">
             <div className="flex items-center gap-6 md:gap-8">
               <div className="relative w-20 h-20 md:w-28 md:h-28 shrink-0 border border-line bg-cream overflow-hidden">
                 <Image
@@ -64,12 +49,9 @@ export const SectionAssistant = () => {
               <div className="flex-1 min-w-0">
                 <h3 className="font-serif text-xl md:text-2xl">{assistant.live.name}</h3>
                 <p className="mt-2 text-sm md:text-base text-muted">{assistant.live.tagline}</p>
-                <p className="mt-4 text-xs uppercase tracking-[0.2em] text-alovy-dark">
-                  chatgpt.com ↗
-                </p>
               </div>
             </div>
-          </a>
+          </div>
         </div>
 
         <div className="mt-20 md:mt-24">
@@ -80,97 +62,101 @@ export const SectionAssistant = () => {
             {assistant.brandVoice.map((sample, index) => (
               <article
                 key={index}
-                className="border border-line p-6 md:p-8 space-y-4 card-hover"
+                className="border border-line p-6 md:p-10 space-y-6 md:space-y-8 bg-cream/40"
               >
-                <h3 className="font-serif text-lg md:text-xl">{sample.title}</h3>
-                <p className="text-base leading-relaxed text-muted">{sample.body}</p>
-                <p className="text-xs uppercase tracking-[0.2em] text-alovy-dark pt-2 border-t border-line">
-                  {sample.attribution}
+                <p className="text-xs uppercase tracking-[0.2em] text-alovy-dark">
+                  {sample.tag}
                 </p>
+
+                <div className="flex justify-end">
+                  <p className="max-w-[80%] md:max-w-[70%] rounded-2xl rounded-tr-sm bg-ink text-cream px-5 py-3 md:px-6 md:py-4 text-sm md:text-base leading-relaxed">
+                    {sample.title}
+                  </p>
+                </div>
+
+                <div className="pl-0 md:pl-2 space-y-5 md:space-y-6 text-base md:text-lg leading-relaxed">
+                  <p>{sample.body}</p>
+                  <p className="font-serif text-lg md:text-xl">{sample.attribution}</p>
+                </div>
               </article>
             ))}
           </div>
         </div>
 
-        <div className="mt-20 md:mt-24">
-          <p className="text-sm uppercase tracking-[0.2em] text-muted mb-8">
-            Ukázky konverzace
-          </p>
-          <div className="space-y-10 md:space-y-14">
-            {assistant.conversations.map((conv, index) => (
-              <article
-                key={index}
-                className="border border-line p-6 md:p-10 space-y-6 md:space-y-8 bg-cream/40"
-              >
-                <p className="text-xs uppercase tracking-[0.2em] text-alovy-dark">
-                  {conv.tag}
+        <div className="mt-20 md:mt-24 space-y-10 md:space-y-14">
+          {assistant.conversations.map((conv, index) => (
+            <article
+              key={index}
+              className="border border-line p-6 md:p-10 space-y-6 md:space-y-8 bg-cream/40"
+            >
+              <p className="text-xs uppercase tracking-[0.2em] text-alovy-dark">
+                {conv.tag}
+              </p>
+
+              <div className="flex justify-end">
+                <p className="max-w-[80%] md:max-w-[70%] rounded-2xl rounded-tr-sm bg-ink text-cream px-5 py-3 md:px-6 md:py-4 text-sm md:text-base leading-relaxed">
+                  {conv.prompt}
                 </p>
+              </div>
 
-                <div className="flex justify-end">
-                  <p className="max-w-[80%] md:max-w-[70%] rounded-2xl rounded-tr-sm bg-ink text-cream px-5 py-3 md:px-6 md:py-4 text-sm md:text-base leading-relaxed">
-                    {conv.prompt}
-                  </p>
-                </div>
-
-                <div className="pl-0 md:pl-2 space-y-5 md:space-y-6 text-base md:text-lg leading-relaxed">
-                  {'contrasts' in conv ? (
-                    <>
-                      <p>{conv.responseLead}</p>
-                      <ol className="space-y-6">
-                        {conv.contrasts.map((c, i) => (
-                          <li key={i} className="space-y-3">
-                            <p className="font-serif text-xl md:text-2xl">{c.heading}</p>
-                            <div className="grid sm:grid-cols-2 gap-4">
-                              <div className="border-l-2 border-alovy pl-4 space-y-2">
-                                <p className="text-xs uppercase tracking-[0.2em] text-alovy-dark">
-                                  Komunikuje
-                                </p>
-                                <p>{c.yes}</p>
-                              </div>
-                              <div className="border-l-2 border-line pl-4 space-y-2">
-                                <p className="text-xs uppercase tracking-[0.2em] text-muted">
-                                  Nekomunikuje
-                                </p>
-                                <p className="text-muted">{c.no}</p>
-                              </div>
+              <div className="pl-0 md:pl-2 space-y-5 md:space-y-6 text-base md:text-lg leading-relaxed">
+                {'contrasts' in conv ? (
+                  <>
+                    <p>{conv.responseLead}</p>
+                    <ol className="space-y-6">
+                      {conv.contrasts.map((c, i) => (
+                        <li key={i} className="space-y-3">
+                          <p className="font-serif text-xl md:text-2xl">{c.heading}</p>
+                          <div className="grid sm:grid-cols-2 gap-4">
+                            <div className="border-l-2 border-alovy pl-4 space-y-2">
+                              <p className="text-xs uppercase tracking-[0.2em] text-alovy-dark">
+                                Komunikuje
+                              </p>
+                              <p>{c.yes}</p>
                             </div>
-                          </li>
-                        ))}
-                      </ol>
-                    </>
-                  ) : 'responseBody' in conv ? (
-                    <>
-                      <h3 className="font-serif text-2xl md:text-3xl leading-tight">
-                        {conv.responseTitle}
-                      </h3>
-                      {conv.responseBody.map((para, i) => (
-                        <p key={i}>{para}</p>
+                            <div className="border-l-2 border-line pl-4 space-y-2">
+                              <p className="text-xs uppercase tracking-[0.2em] text-muted">
+                                Nekomunikuje
+                              </p>
+                              <p className="text-muted">{c.no}</p>
+                            </div>
+                          </div>
+                        </li>
                       ))}
-                      {conv.responseTail ? (
-                        <p className="font-serif text-lg md:text-xl">{conv.responseTail}</p>
-                      ) : null}
-                    </>
-                  ) : (
-                    <>
-                      <h3 className="font-serif text-2xl md:text-3xl leading-tight">
-                        {conv.responseTitle}
-                      </h3>
-                      <div className="font-serif text-xl md:text-2xl leading-relaxed">
-                        {conv.responsePoem.map((line, i) => (
-                          <p key={i}>{line}</p>
-                        ))}
-                      </div>
-                      <p>{conv.responseClose}</p>
-                      <div>
-                        <p className="font-serif text-lg md:text-xl">{conv.responseSignature}</p>
-                        <p className="text-muted">{conv.responseTagline}</p>
-                      </div>
-                    </>
-                  )}
-                </div>
-              </article>
-            ))}
-          </div>
+                    </ol>
+                  </>
+                ) : 'responseBody' in conv ? (
+                  <>
+                    <h3 className="font-serif text-2xl md:text-3xl leading-tight">
+                      {conv.responseTitle}
+                    </h3>
+                    {conv.responseBody.map((para, i) => (
+                      <p key={i}>{para}</p>
+                    ))}
+                    {conv.responseTail ? (
+                      <p className="font-serif text-lg md:text-xl">{conv.responseTail}</p>
+                    ) : null}
+                  </>
+                ) : (
+                  <>
+                    <h3 className="font-serif text-2xl md:text-3xl leading-tight">
+                      {conv.responseTitle}
+                    </h3>
+                    <div className="font-serif text-xl md:text-2xl leading-relaxed">
+                      {conv.responsePoem.map((line, i) => (
+                        <p key={i}>{line}</p>
+                      ))}
+                    </div>
+                    <p>{conv.responseClose}</p>
+                    <div>
+                      <p className="font-serif text-lg md:text-xl">{conv.responseSignature}</p>
+                      <p className="text-muted">{conv.responseTagline}</p>
+                    </div>
+                  </>
+                )}
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>

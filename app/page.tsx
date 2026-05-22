@@ -2,6 +2,7 @@ import { AnchorNav, TopBar } from '@/components/AnchorNav';
 import { Credits } from '@/components/Credits';
 import { Hero } from '@/components/Hero';
 import { SectionAssistant } from '@/components/sections/SectionAssistant';
+import { SectionFloralCatalog } from '@/components/sections/SectionFloralCatalog';
 import { SectionHiggsfield } from '@/components/sections/SectionHiggsfield';
 import { SectionImageCrisis } from '@/components/sections/SectionImageCrisis';
 import { SectionProductRework } from '@/components/sections/SectionProductRework';
@@ -25,8 +26,9 @@ const Page = () => {
         <SectionVisualLanguage />
         <SectionImageCrisis />
         <SectionProductRework />
-        <SectionTeamPortraits />
+        <SectionFloralCatalog />
         <SectionHiggsfield />
+        <SectionTeamPortraits />
         <SectionVoice />
         <SectionAssistant />
         <SectionVibecoding />

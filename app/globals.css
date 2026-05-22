@@ -129,6 +129,12 @@
     animation: bob 2.4s ease-in-out infinite;
   }
 
+  /* Lightbox fade-in */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
   /* Hover underline */
   .link-underline {
     position: relative;
