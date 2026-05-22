@@ -130,11 +130,30 @@ export const SectionAssistant = () => {
                     <h3 className="font-serif text-2xl md:text-3xl leading-tight">
                       {conv.responseTitle}
                     </h3>
-                    {conv.responseBody.map((para, i) => (
+                    {conv.responseBody.slice(0, 1).map((para, i) => (
                       <p key={i}>{para}</p>
                     ))}
-                    {conv.responseTail ? (
-                      <p className="font-serif text-lg md:text-xl">{conv.responseTail}</p>
+                    {conv.responseBody.length > 1 || conv.responseTail ? (
+                      <details className="group">
+                        <summary className="cursor-pointer list-none inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-alovy-dark hover:text-alovy transition-colors select-none">
+                          <span className="group-open:hidden">Rozbalit celý text</span>
+                          <span className="hidden group-open:inline">Sbalit text</span>
+                          <span
+                            aria-hidden
+                            className="inline-block transition-transform duration-300 group-open:rotate-180"
+                          >
+                            ↓
+                          </span>
+                        </summary>
+                        <div className="mt-5 md:mt-6 space-y-5 md:space-y-6">
+                          {conv.responseBody.slice(1).map((para, i) => (
+                            <p key={i}>{para}</p>
+                          ))}
+                          {conv.responseTail ? (
+                            <p className="font-serif text-lg md:text-xl">{conv.responseTail}</p>
+                          ) : null}
+                        </div>
+                      </details>
                     ) : null}
                   </>
                 ) : (

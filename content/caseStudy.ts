@@ -591,16 +591,6 @@ export const caseStudy = {
         liveLabel: 'Otevřít vazbykvetin.cz naživo',
       },
     ] satisfies (GalleryItem & { liveUrl?: string; liveLabel?: string })[],
-    spotlight: {
-      label: 'Spotlight · vazbykvetin.cz',
-      title: 'Funkční rebranding + e-shop',
-      titleAccent: 'po večerech.',
-      stats: {
-        traditional: '200 h',
-        actual: '30 h',
-      },
-      caseUrl: 'https://vazbyant2026.vercel.app',
-    },
     takeaway:
       'Místo statického návrhu posíláme klientovi funkční prototyp. Iterujeme rychle, doručujeme dřív.',
   },
