@@ -12,7 +12,7 @@ export const SectionImageCrisis = () => {
             <div className="text-sm uppercase tracking-[0.2em] text-muted mb-4">
               04 · Krize obrazu
             </div>
-            <h2 className="font-serif text-5xl md:text-6xl leading-[1.05]">
+            <h2 className="font-serif text-5xl lg:text-6xl leading-[1.05]">
               Stockové banky
               <br />
               <em className="text-alovy not-italic">tu vizualitu</em>

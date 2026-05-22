@@ -13,7 +13,7 @@ export const SectionVibecoding = () => {
             <div className="text-sm uppercase tracking-[0.2em] text-muted mb-4">
               11 · Vibecoding
             </div>
-            <h2 className="font-serif text-5xl md:text-6xl leading-[1.05]">
+            <h2 className="font-serif text-5xl lg:text-6xl leading-[1.05]">
               Features za <em className="text-alovy not-italic">dny</em>
               <br />
               místo týdnů.

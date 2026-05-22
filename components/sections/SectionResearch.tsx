@@ -10,7 +10,7 @@ export const SectionResearch = () => {
           <div className="text-sm uppercase tracking-[0.2em] text-muted mb-4">
             02 · Rešerše
           </div>
-          <h2 className="font-serif text-5xl md:text-6xl leading-[1.05]">
+          <h2 className="font-serif text-5xl lg:text-6xl leading-[1.05]">
             Než jsme cokoliv navrhli.
           </h2>
         </div>

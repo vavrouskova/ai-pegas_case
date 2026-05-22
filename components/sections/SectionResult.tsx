@@ -10,20 +10,27 @@ export const SectionResult = () => {
           <div className="text-sm uppercase tracking-[0.2em] text-muted mb-4">
             01 · Výsledek
           </div>
-          <h2 className="font-serif text-5xl md:text-6xl leading-[1.05]">Co umíme.</h2>
+          <h2 className="font-serif text-5xl lg:text-6xl leading-[1.05]">Co umíme.</h2>
         </div>
         <div className="md:col-span-7 md:col-start-6 space-y-6">
           <p className="text-lg md:text-xl leading-relaxed">{result.intro}</p>
           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 text-muted">
-            {result.areas.map((area) => (
-              <li key={area.number} className="flex items-start gap-3">
-                <span className="text-alovy font-serif text-2xl leading-none">·</span>
-                <div>
-                  <strong className="text-ink">{area.title}.</strong>{' '}
-                  {area.description}
-                </div>
-              </li>
-            ))}
+            {result.areas.map((area, index) => {
+              const isLastOdd =
+                result.areas.length % 2 === 1 && index === result.areas.length - 1;
+              return (
+                <li
+                  key={area.number}
+                  className={`flex items-start gap-3 ${isLastOdd ? 'sm:col-span-2' : ''}`}
+                >
+                  <span className="text-alovy font-serif text-2xl leading-none">·</span>
+                  <div>
+                    <strong className="text-ink">{area.title}.</strong>{' '}
+                    {area.description}
+                  </div>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>

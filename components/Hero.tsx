@@ -10,7 +10,7 @@ export const Hero = () => {
           {hero.subtitle}
         </div>
         <h1 className="font-serif text-[12vw] md:text-[8vw] lg:text-[7rem] leading-[0.95] tracking-tight">
-          Pohřebnictví
+          Pohřebnictví (má)
           <br />
           <span className="text-alovy">v rukou AI.</span>
         </h1>

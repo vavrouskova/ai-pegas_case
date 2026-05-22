@@ -68,7 +68,7 @@ export interface FlowStep {
 export const caseStudy = {
   hero: {
     label: 'studAIant · case study',
-    title: 'Pohřebnictví v rukou AI.',
+    title: 'Pohřebnictví (má) v rukou AI.',
     subtitle: 'Texty · Ilustrace · Foto · Hlas · Rešerše · Frontend',
     meta: '2025–2026 · antstudio × PEGAS',
     cta: 'Skroluj',

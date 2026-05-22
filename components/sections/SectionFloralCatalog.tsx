@@ -17,7 +17,7 @@ export const SectionFloralCatalog = () => {
             <div className="text-sm uppercase tracking-[0.2em] text-muted mb-4">
               06 · Katalog květin
             </div>
-            <h2 className="font-serif text-5xl md:text-6xl leading-[1.05]">
+            <h2 className="font-serif text-5xl lg:text-6xl leading-[1.05]">
               Stejný produkt,
               <br />
               <em className="text-alovy not-italic">jiná energie</em>.
