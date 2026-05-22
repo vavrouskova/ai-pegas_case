@@ -104,7 +104,7 @@ export const SectionAssistant = () => {
                   <>
                     <p>{conv.responseLead}</p>
                     <ol className="space-y-6">
-                      {conv.contrasts.map((c, i) => (
+                      {conv.contrasts!.map((c, i) => (
                         <li key={i} className="space-y-3">
                           <p className="font-serif text-xl md:text-2xl">{c.heading}</p>
                           <div className="grid sm:grid-cols-2 gap-4">
@@ -126,14 +126,17 @@ export const SectionAssistant = () => {
                     </ol>
                   </>
                 ) : 'responseBody' in conv ? (
+                  (() => {
+                    const body = conv.responseBody!;
+                    return (
                   <>
                     <h3 className="font-serif text-2xl md:text-3xl leading-tight">
                       {conv.responseTitle}
                     </h3>
-                    {conv.responseBody.slice(0, 1).map((para, i) => (
+                    {body.slice(0, 1).map((para, i) => (
                       <p key={i}>{para}</p>
                     ))}
-                    {conv.responseBody.length > 1 || conv.responseTail ? (
+                    {body.length > 1 || conv.responseTail ? (
                       <details className="group">
                         <summary className="cursor-pointer list-none inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-alovy-dark hover:text-alovy transition-colors select-none">
                           <span className="group-open:hidden">Rozbalit celý text</span>
@@ -146,7 +149,7 @@ export const SectionAssistant = () => {
                           </span>
                         </summary>
                         <div className="mt-5 md:mt-6 space-y-5 md:space-y-6">
-                          {conv.responseBody.slice(1).map((para, i) => (
+                          {body.slice(1).map((para, i) => (
                             <p key={i}>{para}</p>
                           ))}
                           {conv.responseTail ? (
@@ -156,6 +159,8 @@ export const SectionAssistant = () => {
                       </details>
                     ) : null}
                   </>
+                    );
+                  })()
                 ) : (
                   <>
                     <h3 className="font-serif text-2xl md:text-3xl leading-tight">
