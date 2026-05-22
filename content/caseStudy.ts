@@ -619,11 +619,6 @@ export const caseStudy = {
         wide: true,
       },
       {
-        title: 'AI brand asistent na míru',
-        description:
-          'Nastavíme ho, krmíme klientovou značkou, dáme tým k denní práci. Pro klienty, kteří chtějí konzistenci napříč týmem.',
-      },
-      {
         title: 'AI ilustrace v identitě značky',
         description:
           'Fotobanky jsou mrtvé. AI ilustrace držíme jako součást identity značky — tam, kde fotka je moc. Nejen u citlivých témat.',
@@ -639,9 +634,15 @@ export const caseStudy = {
           'Z mobilního snímku z chodby pobočky postavíme studio portrét. Sjednocený tým na webu bez focení — funguje i u lidí, co před fotografa nechtějí.',
       },
       {
+        title: 'AI brand asistent na míru',
+        description:
+          'Nastavíme ho, krmíme klientovou značkou, dáme tým k denní práci. Pro klienty, kteří chtějí konzistenci napříč týmem.',
+      },
+      {
         title: 'Prezentace, podcasty, panely',
         description:
           'Brand prezentace s AI voiceoverem, podcast formát, panely a diskuze s více mluvčími. Plán: vlastní avataři antstudia jako stálé tváře — místo nákladných realizací.',
+        tag: 'Zkoumáme',
       },
       {
         title: 'Vibecoding · funkční frontend',

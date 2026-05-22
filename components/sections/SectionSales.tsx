@@ -49,9 +49,15 @@ export const SectionSales = () => {
                 <span className="font-serif text-5xl md:text-6xl text-alovy leading-none">
                   {String(index + 1).padStart(2, '0')}
                 </span>
-                <span className="text-xs uppercase tracking-widest text-muted">
-                  Balíček
-                </span>
+                {'tag' in pkg && pkg.tag ? (
+                  <span className="text-xs uppercase tracking-widest text-alovy-dark border border-alovy-dark/40 px-2 py-1">
+                    {pkg.tag}
+                  </span>
+                ) : (
+                  <span className="text-xs uppercase tracking-widest text-muted">
+                    Balíček
+                  </span>
+                )}
               </div>
               <h3 className="font-serif text-2xl md:text-3xl leading-tight mb-4">
                 {pkg.title}
