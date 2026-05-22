@@ -595,41 +595,11 @@ export const caseStudy = {
       label: 'Spotlight · vazbykvetin.cz',
       title: 'Funkční rebranding + e-shop',
       titleAccent: 'po večerech.',
-      lead: 'Náš první reálný kontakt s vibecodingem. Žádný brief od klienta, žádný wireframe — designéři si šli hrát a místo landing page skočili rovnou do klientského projektu.',
-      phases: [
-        {
-          number: '01',
-          tag: 'Strategie & zadání',
-          title: 'Brief jsme si udělali sami. S AI.',
-          body: 'AI brainstorming → kompletní brief webu: positioning („citlivá, lidská, klidná, důstojná, řemeslná" — ne kýčovitá, ne romantická), tone of voice, UX principy, mikrocopy, informační architektura, emoční linka.',
-          footer: '12bodový dokument → základ pro všechno ostatní.',
-        },
-        {
-          number: '02',
-          tag: 'Brand systém',
-          title: 'Sesterský subbrand na Pegasu.',
-          body: 'Logo vazárny jsme z černobílého mamuta překreslili do alového v duchu Pegase. Manifest staví na konceptu Mamut = paměť, to co zůstává — metafora vazeb, které nekončí.',
-          footer: 'Claim: „Vazby pro život. Vazby pro loučení."',
-        },
-        {
-          number: '03',
-          tag: 'Technická realizace',
-          title: 'Claude Code → GitHub → Vercel.',
-          body: 'Claude Chat dostal zadání a assety, vypadl 7krokový guide + MD specifikace (CLAUDE.md, VAZBYKVETIN_SPEC.md). Když to mělo tah, přihodili jsme UI knihovnu a dojeli to do funkčního e-shopu včetně košíku.',
-          footer: 'Stack: Claude Code · GitHub · Vercel.',
-        },
-      ],
       stats: {
-        traditionalLabel: 'Klasicky: rebrand + klikací prototyp ve Figmě',
         traditional: '200 h',
-        timeframeLabel: 'a',
-        timeframe: '3 měsíce',
-        actualLead: 'Postavili jsme koncept subbrandu a deployli funkční prototyp s obsahem v responsivu. Za',
         actual: '30 h',
-        actualSuffix: '20–30 hodin po večerech.',
       },
-      takeaway:
-        'Klient má produkt o půl roku dřív → o půl roku dřív začne prodávat.',
+      caseUrl: 'https://vazbyant2026.vercel.app',
     },
     takeaway:
       'Místo statického návrhu posíláme klientovi funkční prototyp. Iterujeme rychle, doručujeme dřív.',

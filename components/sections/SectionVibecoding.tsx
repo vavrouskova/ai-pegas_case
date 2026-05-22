@@ -56,93 +56,41 @@ export const SectionVibecoding = () => {
           </p>
         </div>
 
-        {/* Spotlight — vazbykvetin.cz case-within-case */}
-        <div className="mt-24 md:mt-32 pt-16 md:pt-20 border-t border-line">
-          <p className="text-sm uppercase tracking-[0.2em] text-alovy-dark mb-6">
-            {spotlight.label}
-          </p>
-          <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl leading-[1.05] max-w-4xl">
-            {spotlight.title}
-            <br />
-            <em className="text-alovy not-italic">{spotlight.titleAccent}</em>
-          </h3>
-          <p className="mt-8 md:mt-10 text-lg md:text-xl leading-relaxed text-muted max-w-3xl">
-            {spotlight.lead}
-          </p>
-
-          {/* 3 phases */}
-          <div className="mt-14 md:mt-16 grid md:grid-cols-3 gap-6 md:gap-8">
-            {spotlight.phases.map((phase) => (
-              <article key={phase.number} className="border border-line p-7 md:p-8 card-hover">
-                <div className="flex items-baseline justify-between mb-8">
-                  <span className="font-serif text-5xl md:text-6xl text-alovy leading-none">
-                    {phase.number}
-                  </span>
-                  <span className="text-xs uppercase tracking-widest text-muted">
-                    {phase.tag}
-                  </span>
-                </div>
-                <h4 className="font-serif text-2xl md:text-3xl leading-tight mb-4">
-                  {phase.title}
-                </h4>
-                <p className="text-sm md:text-base text-muted leading-relaxed">{phase.body}</p>
-                <p className="mt-6 pt-6 border-t border-line text-xs uppercase tracking-widest text-muted">
-                  {phase.footer}
-                </p>
-              </article>
-            ))}
-          </div>
-
-          {/* Stats — 200h → 30h */}
-          <div className="mt-20 md:mt-24 text-center">
-            <p className="text-sm uppercase tracking-[0.2em] text-muted mb-6">
-              {spotlight.stats.traditionalLabel}
-            </p>
-            <div className="font-serif font-black text-[18vw] md:text-[14vw] lg:text-[12rem] leading-none">
-              <span className="line-through decoration-alovy decoration-[3px] md:decoration-[6px]">
+        {/* Spotlight — vazbykvetin.cz (kompaktni odkaz na samostatny case) */}
+        <a
+          href={spotlight.caseUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group block mt-12 md:mt-16 border border-line p-6 md:p-7 card-hover"
+        >
+          <div className="grid md:grid-cols-12 gap-4 md:gap-6 items-center">
+            <div className="md:col-span-7 space-y-1">
+              <p className="text-xs uppercase tracking-[0.2em] text-alovy-dark">
+                {spotlight.label}
+              </p>
+              <p className="font-serif text-xl md:text-2xl leading-tight">
+                {spotlight.title} <em className="text-alovy not-italic">{spotlight.titleAccent}</em>
+              </p>
+            </div>
+            <div className="md:col-span-3 flex items-baseline md:justify-center gap-2">
+              <span className="text-xs uppercase tracking-widest text-muted line-through decoration-alovy">
                 {spotlight.stats.traditional}
               </span>
+              <span className="text-muted">→</span>
+              <span className="font-serif text-2xl md:text-3xl text-alovy">
+                {spotlight.stats.actual}
+              </span>
             </div>
-            <p className="font-serif text-2xl md:text-3xl mt-4">
-              {spotlight.stats.timeframeLabel}{' '}
-              <span className="line-through decoration-alovy">{spotlight.stats.timeframe}</span>.
-            </p>
-
-            <div className="my-10 md:my-12 flex justify-center">
-              <svg
-                width="40"
-                height="40"
-                viewBox="0 0 40 40"
-                fill="none"
-                className="text-alovy"
-                aria-hidden
-              >
-                <path
-                  d="M20 8v24M10 22l10 10 10-10"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                />
-              </svg>
+            <div className="md:col-span-2 flex md:justify-end">
+              <span className="inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.2em] text-ink group-hover:text-alovy-dark transition-colors">
+                Otevřít case
+                <span aria-hidden className="transition-transform group-hover:translate-x-0.5">
+                  →
+                </span>
+              </span>
             </div>
-
-            <p className="font-serif text-2xl md:text-3xl mb-6 max-w-3xl mx-auto">
-              {spotlight.stats.actualLead}
-            </p>
-            <div className="font-serif font-black text-[22vw] md:text-[18vw] lg:text-[16rem] leading-none text-alovy">
-              {spotlight.stats.actual}
-            </div>
-            <p className="mt-4 text-sm uppercase tracking-[0.2em] text-muted">
-              {spotlight.stats.actualSuffix}
-            </p>
           </div>
-
-          {/* Spotlight takeaway */}
-          <div className="mt-20 md:mt-24 max-w-3xl mx-auto text-center">
-            <p className="font-serif text-2xl md:text-3xl leading-tight italic text-ink">
-              {spotlight.takeaway}
-            </p>
-          </div>
-        </div>
+        </a>
       </div>
     </section>
   );
