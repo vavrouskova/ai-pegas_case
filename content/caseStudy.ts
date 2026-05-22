@@ -68,7 +68,7 @@ export interface FlowStep {
 export const caseStudy = {
   hero: {
     label: 'studAIant · case study',
-    title: 'Brand PEGAS jsme postavili s AI.',
+    title: 'Pohřebnictví v rukou AI.',
     subtitle: 'Texty · Ilustrace · Foto · Hlas · Rešerše · Frontend',
     meta: '2025–2026 · antstudio × PEGAS',
     cta: 'Skroluj',
@@ -92,7 +92,7 @@ export const caseStudy = {
   // 01 — Výsledek
   result: {
     intro:
-      'Sedm oblastí, ve kterých v kreativě používáme AI jako nástroj na klientských projektech. Tohle umíme dělat — a umíme to prodat dál.',
+      'Sedm oblastí, kde s AI v kreativě reálně něco dotáhneme. Ne pilot, ne demo. Klientské projekty v ostrém provozu — a umíme to prodat dál.',
     areas: [
       {
         number: '01',
@@ -116,13 +116,13 @@ export const caseStudy = {
         number: '04',
         title: 'Hlas',
         description:
-          'Postavili jsme 30minutovou prezentaci značky s AI voiceoverem, interní prezentaci pro firmu a pilotní brand podcast.',
+          '30 minut prezentace značky v AI voiceoveru. Pilotní brand podcast. Klient si pustí — a my nemusíme furt vysvětlovat základy.',
       },
       {
         number: '05',
         title: 'Texty',
         description:
-          'Píšeme copy, brand statementy a web texty s AI asistentem trénovaným na klientovu značku. Brainstormujeme s ním a držíme konzistentní tón.',
+          'Krmíme asistenta klientovou značkou a píšeme s ním — copy, web, brand. Tón drží on, ruku držíme my.',
       },
       {
         number: '06',
@@ -511,7 +511,7 @@ export const caseStudy = {
   // 10 — Brand asistent
   assistant: {
     intro:
-      'Postavili jsme custom ChatGPT asistenta hned na začátku vývoje brandu PEGAS. Krmíme ho a staráme se o něho — brand systémem, informacemi z webu i ukázkami nových aplikací. Postupně jsme ho doladili na značku, i přes její náročný minimalismus.',
+      'Custom ChatGPT asistent stojí u brandu PEGAS od první čáry. Krmíme ho systémem, webem, novými aplikacemi. Naučili jsme ho i ten minimalismus — a to dá práci.',
     capabilities: [],
     conversations: [
       {
@@ -591,7 +591,7 @@ export const caseStudy = {
   // 11 — Vibecoding
   vibecoding: {
     intro:
-      'Postavili jsme features, které by tradičně trvaly týdny. S klientem se bavíme rovnou na funkčním prototypu a ladíme na pohyblivém modelu — nahrazujeme tím Figmu a urychlujeme práci dál.',
+      'Features, co by tradičně chtěly týdny, máme za dny. Místo Figmy posíláme funkční prototyp — klient klikne, my upravíme.',
     features: [
       {
         title: 'Kalendář obřadů',
@@ -652,7 +652,7 @@ export const caseStudy = {
       {
         title: 'Higgsfield foto workflow',
         description:
-          'Mobilní snímky proměníme v produktové fotky. Pro e-shopy s rychlým produktovým cyklem.',
+          'Mobil za pobočkou → produktová fotka v binderu do druhého dne. Pro každého, kdo má víc produktů než fotografů.',
       },
       {
         title: 'Firemní portréty z mobilu',
@@ -667,7 +667,7 @@ export const caseStudy = {
       {
         title: 'Prezentace, podcasty, panely',
         description:
-          'Brand prezentace s AI voiceoverem, podcast formát, panelové diskuze s více mluvčími. Plán: vlastní avataři.',
+          'Prezentace, co si klient pustí sám. Podcast, panelovky s víc hlasy. A na obzoru avataři — vlastní hlas, vlastní tvář.',
         tag: 'Zkoumáme',
       },
       {
@@ -676,12 +676,7 @@ export const caseStudy = {
           'Frontend přímo v kódu, ne ve Figmě. Kalendáře, wizards, editory za dny — s klientem se bavíme rovnou na pohyblivém modelu, ne nad statickým návrhem.',
       },
     ],
-    takeaway:
-      'Bez AI bychom středoevropskou vizualitu pohřebnictví nedokázali postavit takhle.',
-    closingBox: {
-      tag: 'Mezi námi',
-      body: 'Tuhle stránku jsme taky stavěli s AI — text, design, kód. Vy ale robot nejste. A přesně proto níž ještě pár momentů, kdy se AI zasekla i nám.',
-    },
+    creativeNote: 'AI nás pustila z klece. Konečně se můžeme vyřádit — místo abychom chroupali kompromisy. A když se nedaří?',
     failedGallery: {
       label: 'Když se nedaří',
       intro:
@@ -706,7 +701,7 @@ export const caseStudy = {
       ] satisfies GalleryItem[],
     },
     epilogue: {
-      label: 'P.S.',
+      label: 'Zpátky na zem',
       intro:
         'AI je nástroj. Občas s vlastní hlavou. Tady dva pokusy o květinu, která má stát na všech nohou stojanu.',
       items: [

@@ -10,14 +10,12 @@ export const Hero = () => {
           {hero.subtitle}
         </div>
         <h1 className="font-serif text-[12vw] md:text-[8vw] lg:text-[7rem] leading-[0.95] tracking-tight">
-          Brand <em className="text-alovy not-italic">PEGAS</em>
+          Pohřebnictví
           <br />
-          jsme postavili
-          <br />
-          <span className="text-alovy">s AI.</span>
+          <span className="text-alovy">v rukou AI.</span>
         </h1>
         <p className="mt-10 md:mt-14 text-xl md:text-2xl max-w-2xl leading-snug text-muted">
-          Texty, ilustrace, fotky, hlas, kód. V antu používáme AI jako nástroj na klientských
+          Texty, ilustrace, fotky, hlas, kód. V kreativě používáme AI jako nástroj na klientských
           projektech — a&nbsp;tohle všechno <em>umíme prodat dál</em>.
         </p>
         <div className="mt-12 text-sm uppercase tracking-[0.2em] text-muted">{hero.meta}</div>
