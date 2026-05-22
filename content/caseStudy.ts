@@ -616,9 +616,9 @@ export const caseStudy = {
           'Nastavíme ho, krmíme klientovou značkou, dáme tým k denní práci. Pro klienty, kteří chtějí konzistenci napříč týmem.',
       },
       {
-        title: 'AI ilustrace pro citlivá témata',
+        title: 'AI ilustrace v identitě značky',
         description:
-          'Pro obory, kde stocková banka selhává. Konkrétní výstupy, ne mood.',
+          'Fotobanky jsou mrtvé. AI ilustrace držíme jako součást identity značky — tam, kde fotka je moc. Nejen u citlivých témat.',
       },
       {
         title: 'Higgsfield foto workflow',
