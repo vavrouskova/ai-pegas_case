@@ -31,3 +31,7 @@ next-env.d.ts
 # IDE
 /.idea
 .vscode/settings.json
+
+# Source assets — raw inputs (PDFs, raw Higgsfield outputs, screenshots)
+# Not deployed; kept locally for reference
+_source/
